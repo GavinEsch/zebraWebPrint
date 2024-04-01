@@ -4,12 +4,17 @@ from .models import LPN
 
 from django.views.decorators.csrf import csrf_exempt
 
+"""This function is used to display the print page. It is called when the user clicks the 'Print' button on the home page."""
 def print(request):
     return render(request, 'userPrint/printPage.html')
 
+"""This function is used to display the admin print page. It is called when the user clicks the 'Admin Print' button on the print page."""
 def adminPrint(request):
     return render(request, 'userPrint/adminPrintPage.html')
 
+"""
+This function is used to add a new LPN to the database. It is called when the user enters a new LPN in the input field and clicks the 'Add LPN' button.
+"""
 @csrf_exempt
 def add_lpn(request):
     if request.method == 'POST':
