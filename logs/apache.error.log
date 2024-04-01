@@ -1,0 +1,998 @@
+[Sun Mar 31 10:50:17.734298 2024] [ssl:warn] [pid 3748:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 10:50:17.734298 2024] [ssl:warn] [pid 3748:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 10:50:18.359097 2024] [ssl:warn] [pid 6536:tid 432] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 10:50:18.359097 2024] [ssl:warn] [pid 6536:tid 432] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 10:50:18.390338 2024] [ssl:warn] [pid 6536:tid 432] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 10:50:18.390338 2024] [ssl:warn] [pid 6536:tid 432] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:02:44.730156 2024] [ssl:warn] [pid 3748:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:02:44.730156 2024] [ssl:warn] [pid 3748:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:02:45.334251 2024] [ssl:warn] [pid 8356:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:02:45.335251 2024] [ssl:warn] [pid 8356:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:02:45.363506 2024] [ssl:warn] [pid 8356:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:02:45.363506 2024] [ssl:warn] [pid 8356:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:05:39.940857 2024] [ssl:warn] [pid 3748:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:05:39.940857 2024] [ssl:warn] [pid 3748:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:05:40.537538 2024] [ssl:warn] [pid 12024:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:05:40.537538 2024] [ssl:warn] [pid 12024:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:05:40.565504 2024] [ssl:warn] [pid 12024:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:05:40.565504 2024] [ssl:warn] [pid 12024:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:25:12.283418 2024] [ssl:warn] [pid 3748:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:25:12.283418 2024] [ssl:warn] [pid 3748:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:25:12.933838 2024] [ssl:warn] [pid 5756:tid 448] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:25:12.934838 2024] [ssl:warn] [pid 5756:tid 448] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:25:12.968245 2024] [ssl:warn] [pid 5756:tid 448] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:25:12.968245 2024] [ssl:warn] [pid 5756:tid 448] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:27:32.439654 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189] mod_wsgi (pid=5756): Failed to exec Python script file 'C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py'.
+[Sun Mar 31 11:27:32.439654 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189] mod_wsgi (pid=5756): Exception occurred processing WSGI script 'C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py'.
+[Sun Mar 31 11:27:32.464284 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189] Traceback (most recent call last):\r
+[Sun Mar 31 11:27:32.476285 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py", line 13, in <module>\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]     application = get_wsgi_application()\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]                   ^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\wsgi.py", line 12, in get_wsgi_application\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]     django.setup(set_prefix=False)\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\__init__.py", line 19, in setup\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]                       ^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 89, in __getattr__\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]     self._setup(name)\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 76, in _setup\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]     self._wrapped = Settings(settings_module)\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]                     ^^^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 190, in __init__\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]     mod = importlib.import_module(self.SETTINGS_MODULE)\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\importlib\\__init__.py", line 90, in import_module\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]     return _bootstrap._gcd_import(name[level:], package, level)\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import\r
+[Sun Mar 31 11:27:32.478286 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load\r
+[Sun Mar 31 11:27:32.479284 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked\r
+[Sun Mar 31 11:27:32.479284 2024] [wsgi:error] [pid 5756:tid 916] [remote 192.168.0.155:51189] ModuleNotFoundError: No module named 'main'\r
+[Sun Mar 31 11:27:32.482285 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189] mod_wsgi (pid=5756): Failed to exec Python script file 'C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py'.
+[Sun Mar 31 11:27:32.482285 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189] mod_wsgi (pid=5756): Exception occurred processing WSGI script 'C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py'.
+[Sun Mar 31 11:27:32.483284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189] Traceback (most recent call last):\r
+[Sun Mar 31 11:27:32.483284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py", line 13, in <module>\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]     application = get_wsgi_application()\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]                   ^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\wsgi.py", line 12, in get_wsgi_application\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]     django.setup(set_prefix=False)\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\__init__.py", line 19, in setup\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]                       ^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 89, in __getattr__\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]     self._setup(name)\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 76, in _setup\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]     self._wrapped = Settings(settings_module)\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]                     ^^^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 190, in __init__\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]     mod = importlib.import_module(self.SETTINGS_MODULE)\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\importlib\\__init__.py", line 90, in import_module\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]     return _bootstrap._gcd_import(name[level:], package, level)\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked\r
+[Sun Mar 31 11:27:32.484284 2024] [wsgi:error] [pid 5756:tid 932] [remote 192.168.0.155:51189] ModuleNotFoundError: No module named 'main'\r
+[Sun Mar 31 11:27:32.489284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189] mod_wsgi (pid=5756): Failed to exec Python script file 'C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py'.
+[Sun Mar 31 11:27:32.489284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189] mod_wsgi (pid=5756): Exception occurred processing WSGI script 'C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py'.
+[Sun Mar 31 11:27:32.490284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189] Traceback (most recent call last):\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py", line 13, in <module>\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]     application = get_wsgi_application()\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]                   ^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\wsgi.py", line 12, in get_wsgi_application\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]     django.setup(set_prefix=False)\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\__init__.py", line 19, in setup\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]                       ^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 89, in __getattr__\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]     self._setup(name)\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 76, in _setup\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]     self._wrapped = Settings(settings_module)\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]                     ^^^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 190, in __init__\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]     mod = importlib.import_module(self.SETTINGS_MODULE)\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\importlib\\__init__.py", line 90, in import_module\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]     return _bootstrap._gcd_import(name[level:], package, level)\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import\r
+[Sun Mar 31 11:27:32.491284 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load\r
+[Sun Mar 31 11:27:32.492319 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked\r
+[Sun Mar 31 11:27:32.492319 2024] [wsgi:error] [pid 5756:tid 924] [remote 192.168.0.155:51189] ModuleNotFoundError: No module named 'main'\r
+[Sun Mar 31 11:27:32.819400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189] mod_wsgi (pid=5756): Failed to exec Python script file 'C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py'., referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.819400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189] mod_wsgi (pid=5756): Exception occurred processing WSGI script 'C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py'., referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189] Traceback (most recent call last):\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py", line 13, in <module>\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]     application = get_wsgi_application()\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]                   ^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\wsgi.py", line 12, in get_wsgi_application\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]     django.setup(set_prefix=False)\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\__init__.py", line 19, in setup\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]                       ^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 89, in __getattr__\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]     self._setup(name)\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 76, in _setup\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]     self._wrapped = Settings(settings_module)\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]                     ^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 190, in __init__\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]     mod = importlib.import_module(self.SETTINGS_MODULE)\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.820400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.821400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\importlib\\__init__.py", line 90, in import_module\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.821400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]     return _bootstrap._gcd_import(name[level:], package, level)\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.821400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.821400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.821400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.821400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.821400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.821400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.821400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.821400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189]   File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:27:32.821400 2024] [wsgi:error] [pid 5756:tid 928] [remote 192.168.0.155:51189] ModuleNotFoundError: No module named 'main'\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:36:58.756308 2024] [ssl:warn] [pid 3748:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:36:58.756308 2024] [ssl:warn] [pid 3748:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:36:59.811229 2024] [ssl:warn] [pid 2444:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:36:59.811229 2024] [ssl:warn] [pid 2444:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:36:59.844537 2024] [ssl:warn] [pid 2444:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:36:59.844537 2024] [ssl:warn] [pid 2444:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253] mod_wsgi (pid=2444): Failed to exec Python script file 'C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py'.
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253] mod_wsgi (pid=2444): Exception occurred processing WSGI script 'C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py'.
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253] Traceback (most recent call last):\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py", line 13, in <module>\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]     application = get_wsgi_application()\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]                   ^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\wsgi.py", line 12, in get_wsgi_application\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]     django.setup(set_prefix=False)\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\__init__.py", line 19, in setup\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]                       ^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 89, in __getattr__\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]     self._setup(name)\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 76, in _setup\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]     self._wrapped = Settings(settings_module)\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]                     ^^^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 190, in __init__\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]     mod = importlib.import_module(self.SETTINGS_MODULE)\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\importlib\\__init__.py", line 90, in import_module\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]     return _bootstrap._gcd_import(name[level:], package, level)\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked\r
+[Sun Mar 31 11:37:36.564175 2024] [wsgi:error] [pid 2444:tid 916] [remote 192.168.0.155:51253] ModuleNotFoundError: No module named 'main'\r
+[Sun Mar 31 11:37:36.659394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253] mod_wsgi (pid=2444): Failed to exec Python script file 'C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py'., referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.659394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253] mod_wsgi (pid=2444): Exception occurred processing WSGI script 'C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py'., referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.660394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253] Traceback (most recent call last):\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.660394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "C:/Users/ZebraTest/Desktop/zebraWebPrint/zebraWebPrint/wsgi.py", line 13, in <module>\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]     application = get_wsgi_application()\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]                   ^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\core\\wsgi.py", line 12, in get_wsgi_application\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]     django.setup(set_prefix=False)\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\__init__.py", line 19, in setup\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]     configure_logging(settings.LOGGING_CONFIG, settings.LOGGING)\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]                       ^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 89, in __getattr__\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]     self._setup(name)\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 76, in _setup\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]     self._wrapped = Settings(settings_module)\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]                     ^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\django\\conf\\__init__.py", line 190, in __init__\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]     mod = importlib.import_module(self.SETTINGS_MODULE)\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "C:\\Users\\ZebraTest\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\importlib\\__init__.py", line 90, in import_module\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]     return _bootstrap._gcd_import(name[level:], package, level)\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.661394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.662394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253]   File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:37:36.662394 2024] [wsgi:error] [pid 2444:tid 920] [remote 192.168.0.155:51253] ModuleNotFoundError: No module named 'main'\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:38:54.607920 2024] [ssl:warn] [pid 3748:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:38:54.607920 2024] [ssl:warn] [pid 3748:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:38:55.570009 2024] [ssl:warn] [pid 12160:tid 448] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:38:55.571010 2024] [ssl:warn] [pid 12160:tid 448] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:38:55.601322 2024] [ssl:warn] [pid 12160:tid 448] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:38:55.601322 2024] [ssl:warn] [pid 12160:tid 448] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:39:26.439646 2024] [wsgi:error] [pid 12160:tid 916] [remote 192.168.0.155:51270] Not Found: /\r
+[Sun Mar 31 11:39:26.597232 2024] [wsgi:error] [pid 12160:tid 920] [remote 192.168.0.155:51270] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:39:48.097409 2024] [wsgi:error] [pid 12160:tid 948] [remote 192.168.0.155:51309] Not Found: /\r
+[Sun Mar 31 11:39:54.871414 2024] [wsgi:error] [pid 12160:tid 952] [remote 192.168.0.155:51322] Not Found: /BrowserPrint-Zebra-1.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:39:54.886770 2024] [wsgi:error] [pid 12160:tid 1084] [remote 192.168.0.155:51322] Not Found: /BrowserPrint-3.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:39:54.911055 2024] [wsgi:error] [pid 12160:tid 960] [remote 192.168.0.155:51322] Not Found: /GRLBrowserPrint.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:46:01.626613 2024] [ssl:warn] [pid 3748:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:46:01.626613 2024] [ssl:warn] [pid 3748:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:46:02.251234 2024] [ssl:warn] [pid 3364:tid 456] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:46:02.251234 2024] [ssl:warn] [pid 3364:tid 456] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:46:02.280555 2024] [ssl:warn] [pid 3364:tid 456] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:46:02.280555 2024] [ssl:warn] [pid 3364:tid 456] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:46:38.419737 2024] [wsgi:error] [pid 3364:tid 940] [remote 192.168.0.155:51409] Not Found: /\r
+[Sun Mar 31 11:46:38.775742 2024] [wsgi:error] [pid 3364:tid 944] [remote 192.168.0.155:51409] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com:4443/
+[Sun Mar 31 11:46:46.919368 2024] [wsgi:error] [pid 3364:tid 952] [remote 192.168.0.155:51419] Not Found: /userPrint/static/userPrint/BrowserPrint-3.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:46:46.937747 2024] [wsgi:error] [pid 3364:tid 956] [remote 192.168.0.155:51419] Not Found: /userPrint/static/userPrint/BrowserPrint-Zebra-1.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:46:46.940746 2024] [wsgi:error] [pid 3364:tid 960] [remote 192.168.0.155:51419] Not Found: /userPrint/static/userPrint/GRLBrowserPrint.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:50:30.314976 2024] [authz_core:error] [pid 3364:tid 964] [remote 192.168.0.155:51535] AH01630: client denied by server configuration: C:/Users/ZebraTest/Desktop/zebraWebPrint/staticfilesuserPrint
+[Sun Mar 31 11:51:29.122662 2024] [ssl:warn] [pid 3748:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:51:29.122662 2024] [ssl:warn] [pid 3748:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:51:29.723778 2024] [ssl:warn] [pid 6388:tid 448] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:51:29.724781 2024] [ssl:warn] [pid 6388:tid 448] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:51:29.754017 2024] [ssl:warn] [pid 6388:tid 448] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:51:29.754017 2024] [ssl:warn] [pid 6388:tid 448] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:51:41.429546 2024] [wsgi:error] [pid 6388:tid 924] [remote 192.168.0.155:51585] Not Found: /userPrint/static/userPrint/BrowserPrint-3.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:51:41.566805 2024] [wsgi:error] [pid 6388:tid 928] [remote 192.168.0.155:51585] Not Found: /userPrint/static/userPrint/BrowserPrint-Zebra-1.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:51:41.583803 2024] [wsgi:error] [pid 6388:tid 932] [remote 192.168.0.155:51585] Not Found: /userPrint/static/userPrint/GRLBrowserPrint.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:53:08.618926 2024] [wsgi:error] [pid 6388:tid 936] [remote 192.168.0.155:51647] Not Found: /userPrint/\r
+[Sun Mar 31 11:53:08.725926 2024] [wsgi:error] [pid 6388:tid 940] [remote 192.168.0.155:51647] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com:4443/userPrint/
+[Sun Mar 31 11:53:15.853914 2024] [wsgi:error] [pid 6388:tid 964] [remote 192.168.0.155:51659] Not Found: /userPrint/static/userPrint/GRLBrowserPrint.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:53:15.859914 2024] [wsgi:error] [pid 6388:tid 956] [remote 192.168.0.155:51659] Not Found: /userPrint/static/userPrint/BrowserPrint-3.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:53:15.863915 2024] [wsgi:error] [pid 6388:tid 960] [remote 192.168.0.155:51659] Not Found: /userPrint/static/userPrint/BrowserPrint-Zebra-1.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:53:55.102797 2024] [wsgi:error] [pid 6388:tid 968] [remote 192.168.0.155:51689] Not Found: /userPrint/static/userPrint/BrowserPrint-3.1.250.min.js\r
+[Sun Mar 31 11:55:13.801729 2024] [ssl:warn] [pid 3748:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:55:13.801729 2024] [ssl:warn] [pid 3748:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:55:14.399918 2024] [ssl:warn] [pid 9928:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:55:14.400917 2024] [ssl:warn] [pid 9928:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:55:14.428320 2024] [ssl:warn] [pid 9928:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:55:14.428320 2024] [ssl:warn] [pid 9928:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:55:25.195535 2024] [wsgi:error] [pid 9928:tid 932] [remote 192.168.0.155:51757] Not Found: /userPrint/static/userPrint/BrowserPrint-3.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:55:25.259268 2024] [wsgi:error] [pid 9928:tid 936] [remote 192.168.0.155:51757] Not Found: /userPrint/static/userPrint/BrowserPrint-Zebra-1.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:55:25.278783 2024] [wsgi:error] [pid 9928:tid 944] [remote 192.168.0.155:51757] Not Found: /userPrint/static/userPrint/GRLBrowserPrint.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:57:55.507930 2024] [wsgi:error] [pid 9928:tid 952] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/BrowserPrint-3.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:57:55.528167 2024] [wsgi:error] [pid 9928:tid 956] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/BrowserPrint-Zebra-1.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:57:55.545605 2024] [wsgi:error] [pid 9928:tid 960] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/GRLBrowserPrint.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:57:56.930205 2024] [wsgi:error] [pid 9928:tid 968] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/BrowserPrint-3.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:57:56.951207 2024] [wsgi:error] [pid 9928:tid 972] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/BrowserPrint-Zebra-1.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:57:56.969440 2024] [wsgi:error] [pid 9928:tid 976] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/GRLBrowserPrint.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:57:57.903465 2024] [wsgi:error] [pid 9928:tid 940] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/BrowserPrint-3.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:57:57.923464 2024] [wsgi:error] [pid 9928:tid 984] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/BrowserPrint-Zebra-1.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:57:58.014295 2024] [wsgi:error] [pid 9928:tid 988] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/GRLBrowserPrint.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:57:59.275324 2024] [wsgi:error] [pid 9928:tid 996] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/BrowserPrint-3.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:57:59.294325 2024] [wsgi:error] [pid 9928:tid 1000] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/BrowserPrint-Zebra-1.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:57:59.313325 2024] [wsgi:error] [pid 9928:tid 1004] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/GRLBrowserPrint.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:58:00.613849 2024] [wsgi:error] [pid 9928:tid 1012] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/BrowserPrint-3.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:58:00.629655 2024] [wsgi:error] [pid 9928:tid 1016] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/BrowserPrint-Zebra-1.1.250.min.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:58:00.644655 2024] [wsgi:error] [pid 9928:tid 1020] [remote 192.168.0.155:51836] Not Found: /userPrint/static/userPrint/GRLBrowserPrint.js\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 11:58:06.015021 2024] [ssl:warn] [pid 3748:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:58:06.015021 2024] [ssl:warn] [pid 3748:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:58:06.628440 2024] [ssl:warn] [pid 8720:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:58:06.628440 2024] [ssl:warn] [pid 8720:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 11:58:06.657956 2024] [ssl:warn] [pid 8720:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 11:58:06.657956 2024] [ssl:warn] [pid 8720:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 12:55:58.934530 2024] [ssl:warn] [pid 3748:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 12:55:58.934530 2024] [ssl:warn] [pid 3748:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 12:55:59.548005 2024] [ssl:warn] [pid 11316:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 12:55:59.549004 2024] [ssl:warn] [pid 11316:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 12:55:59.578447 2024] [ssl:warn] [pid 11316:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 12:55:59.578447 2024] [ssl:warn] [pid 11316:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 12:56:10.693263 2024] [wsgi:error] [pid 11316:tid 1060] [remote 192.168.0.155:52828] Bad Request: /userPrint\r
+[Sun Mar 31 12:59:40.883607 2024] [wsgi:error] [pid 11316:tid 916] [remote 192.168.0.155:52852] Bad Request: /userPrint\r
+[Sun Mar 31 12:59:50.317015 2024] [wsgi:error] [pid 11316:tid 920] [remote 192.168.0.155:52861] Bad Request: /userPrint\r
+[Sun Mar 31 13:03:37.102769 2024] [wsgi:error] [pid 11316:tid 924] [remote 192.168.0.155:53469] Not Found: /userPrint/static/userPrint/BrowserPrint-3.1.250.min.js\r
+[Sun Mar 31 13:03:41.022768 2024] [wsgi:error] [pid 11316:tid 928] [remote 192.168.0.155:53469] Bad Request: /userPrint\r
+[Sun Mar 31 13:03:44.468391 2024] [wsgi:error] [pid 11316:tid 932] [remote 192.168.0.155:53469] Bad Request: /userPrint\r
+[Sun Mar 31 13:23:20.154739 2024] [ssl:warn] [pid 3748:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 13:23:20.154739 2024] [ssl:warn] [pid 3748:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 13:23:21.464558 2024] [ssl:warn] [pid 11788:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 13:23:21.465559 2024] [ssl:warn] [pid 11788:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 13:23:21.511557 2024] [ssl:warn] [pid 11788:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 13:23:21.511557 2024] [ssl:warn] [pid 11788:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 13:48:03.751392 2024] [ssl:warn] [pid 3748:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 13:48:03.751392 2024] [ssl:warn] [pid 3748:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 13:48:04.344986 2024] [ssl:warn] [pid 14364:tid 448] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 13:48:04.344986 2024] [ssl:warn] [pid 14364:tid 448] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 13:48:04.376191 2024] [ssl:warn] [pid 14364:tid 448] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 13:48:04.376191 2024] [ssl:warn] [pid 14364:tid 448] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 13:48:43.503094 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 13:48:43.503094 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 13:48:43.534335 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 13:48:43.534335 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 13:48:45.065095 2024] [ssl:warn] [pid 4664:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 13:48:45.065095 2024] [ssl:warn] [pid 4664:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 13:48:45.080715 2024] [ssl:warn] [pid 4664:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 13:48:45.080715 2024] [ssl:warn] [pid 4664:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 13:49:55.578950 2024] [wsgi:error] [pid 4664:tid 988] [remote 192.168.0.155:49785] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:54:40.984304 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 13:54:40.984304 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 13:54:41.624723 2024] [ssl:warn] [pid 9836:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 13:54:41.624723 2024] [ssl:warn] [pid 9836:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 13:54:41.640342 2024] [ssl:warn] [pid 9836:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 13:54:41.640342 2024] [ssl:warn] [pid 9836:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 13:59:19.764866 2024] [wsgi:error] [pid 9836:tid 964] [remote 192.168.0.155:50106] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.068746 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126] Internal Server Error: /api/add_lpn/\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.068746 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126] Traceback (most recent call last):\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.068746 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\exception.py", line 55, in inner\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.068746 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126]     response = get_response(request)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.068746 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126]                ^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.068746 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\base.py", line 197, in _get_response\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.068746 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126]     response = wrapped_callback(request, *callback_args, **callback_kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.068746 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.068746 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\views\\decorators\\csrf.py", line 65, in _view_wrapper\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.084370 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126]     return view_func(request, *args, **kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.084370 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.084370 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\userPrint\\views.py", line 25, in add_lpn\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.084370 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126]     print('LPN added:', lpn.full_lpn)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:35.084370 2024] [wsgi:error] [pid 9836:tid 968] [remote 192.168.0.155:50126] TypeError: print() takes 1 positional argument but 2 were given\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138] Internal Server Error: /api/add_lpn/\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138] Traceback (most recent call last):\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\exception.py", line 55, in inner\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138]     response = get_response(request)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138]                ^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\base.py", line 197, in _get_response\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138]     response = wrapped_callback(request, *callback_args, **callback_kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\views\\decorators\\csrf.py", line 65, in _view_wrapper\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138]     return view_func(request, *args, **kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\userPrint\\views.py", line 25, in add_lpn\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138]     print('LPN added:', lpn.full_lpn)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 13:59:42.318134 2024] [wsgi:error] [pid 9836:tid 972] [remote 192.168.0.155:50138] TypeError: print() takes 1 positional argument but 2 were given\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160] Internal Server Error: /api/add_lpn/\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160] Traceback (most recent call last):\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\exception.py", line 55, in inner\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160]     response = get_response(request)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160]                ^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\base.py", line 197, in _get_response\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160]     response = wrapped_callback(request, *callback_args, **callback_kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\views\\decorators\\csrf.py", line 65, in _view_wrapper\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160]     return view_func(request, *args, **kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\userPrint\\views.py", line 25, in add_lpn\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160]     print('LPN added:', lpn.full_lpn)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:00:19.904592 2024] [wsgi:error] [pid 9836:tid 976] [remote 192.168.0.155:50160] TypeError: print() takes 1 positional argument but 2 were given\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:03.681654 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 14:02:03.681654 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 14:02:04.315764 2024] [ssl:warn] [pid 8068:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 14:02:04.315764 2024] [ssl:warn] [pid 8068:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 14:02:04.344053 2024] [ssl:warn] [pid 8068:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 14:02:04.344053 2024] [ssl:warn] [pid 8068:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233] Internal Server Error: /api/add_lpn/\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233] Traceback (most recent call last):\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\exception.py", line 55, in inner\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233]     response = get_response(request)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233]                ^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\base.py", line 197, in _get_response\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233]     response = wrapped_callback(request, *callback_args, **callback_kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\views\\decorators\\csrf.py", line 65, in _view_wrapper\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233]     return view_func(request, *args, **kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\userPrint\\views.py", line 25, in add_lpn\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233]     print('LPN added:', lpn.full_lpn)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:02:16.674764 2024] [wsgi:error] [pid 8068:tid 924] [remote 192.168.0.155:50233] TypeError: print() takes 1 positional argument but 2 were given\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:05:42.787467 2024] [wsgi:error] [pid 8068:tid 928] [remote 192.168.0.155:50396] Bad Request: /api/add_lpn/\r
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470] Internal Server Error: /api/add_lpn/\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470] Traceback (most recent call last):\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\exception.py", line 55, in inner\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470]     response = get_response(request)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470]                ^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\base.py", line 197, in _get_response\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470]     response = wrapped_callback(request, *callback_args, **callback_kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\views\\decorators\\csrf.py", line 65, in _view_wrapper\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470]     return view_func(request, *args, **kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\userPrint\\views.py", line 25, in add_lpn\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470]     lpn.save()\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:07:09.806475 2024] [wsgi:error] [pid 8068:tid 940] [remote 192.168.0.155:50470] TypeError: print() takes 1 positional argument but 2 were given\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:13:49.194386 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 14:13:49.194386 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 14:13:49.870711 2024] [ssl:warn] [pid 11104:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 14:13:49.870711 2024] [ssl:warn] [pid 11104:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 14:13:49.899123 2024] [ssl:warn] [pid 11104:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 14:13:49.900123 2024] [ssl:warn] [pid 11104:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 14:14:05.654934 2024] [wsgi:error] [pid 11104:tid 1056] [remote 192.168.0.155:50681] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.278121 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695] Internal Server Error: /api/add_lpn/\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.278121 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695] Traceback (most recent call last):\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.278121 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\exception.py", line 55, in inner\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.278121 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695]     response = get_response(request)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.278121 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695]                ^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.278121 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\base.py", line 197, in _get_response\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.278121 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695]     response = wrapped_callback(request, *callback_args, **callback_kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.278121 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.278121 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\views\\decorators\\csrf.py", line 65, in _view_wrapper\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.278121 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695]     return view_func(request, *args, **kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.278121 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.278121 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\userPrint\\views.py", line 12, in add_lpn\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.278121 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695]     print('Request:', request.method, request.body)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:14:12.279122 2024] [wsgi:error] [pid 11104:tid 1040] [remote 192.168.0.155:50695] TypeError: print() takes 1 positional argument but 3 were given\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:41.322246 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 14:16:41.322246 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 14:16:42.084518 2024] [ssl:warn] [pid 8320:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 14:16:42.085518 2024] [ssl:warn] [pid 8320:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 14:16:42.113849 2024] [ssl:warn] [pid 8320:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Sun Mar 31 14:16:42.113849 2024] [ssl:warn] [pid 8320:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856] Internal Server Error: /api/add_lpn/\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856] Traceback (most recent call last):\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\exception.py", line 55, in inner\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856]     response = get_response(request)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856]                ^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\base.py", line 197, in _get_response\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856]     response = wrapped_callback(request, *callback_args, **callback_kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\views\\decorators\\csrf.py", line 65, in _view_wrapper\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856]     return view_func(request, *args, **kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\userPrint\\views.py", line 12, in add_lpn\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856]     print('Request:', request.method, request.body)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:16:50.277515 2024] [wsgi:error] [pid 8320:tid 960] [remote 192.168.0.155:50856] TypeError: print() takes 1 positional argument but 3 were given\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904] Internal Server Error: /api/add_lpn/\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904] Traceback (most recent call last):\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\exception.py", line 55, in inner\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904]     response = get_response(request)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904]                ^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\base.py", line 197, in _get_response\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904]     response = wrapped_callback(request, *callback_args, **callback_kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\views\\decorators\\csrf.py", line 65, in _view_wrapper\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904]     return view_func(request, *args, **kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\userPrint\\views.py", line 12, in add_lpn\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904]     print('Request:', request.method, request.body)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Sun Mar 31 14:17:10.607126 2024] [wsgi:error] [pid 8320:tid 980] [remote 192.168.0.155:50904] TypeError: print() takes 1 positional argument but 3 were given\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:07.179632 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 06:06:07.180632 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 06:06:08.108133 2024] [ssl:warn] [pid 13020:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 06:06:08.109133 2024] [ssl:warn] [pid 13020:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 06:06:08.227257 2024] [ssl:warn] [pid 13020:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 06:06:08.227257 2024] [ssl:warn] [pid 13020:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105] Internal Server Error: /api/add_lpn/\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105] Traceback (most recent call last):\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\exception.py", line 55, in inner\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105]     response = get_response(request)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105]                ^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\base.py", line 197, in _get_response\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105]     response = wrapped_callback(request, *callback_args, **callback_kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\views\\decorators\\csrf.py", line 65, in _view_wrapper\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105]     return view_func(request, *args, **kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\userPrint\\views.py", line 25, in add_lpn\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105]     print('LPN added:', lpn.full_lpn)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:15.616436 2024] [wsgi:error] [pid 13020:tid 932] [remote 192.168.0.155:53105] TypeError: print() takes 1 positional argument but 2 were given\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:24.272584 2024] [wsgi:error] [pid 13020:tid 936] [remote 192.168.0.155:53128] Bad Request: /api/add_lpn/\r
+[Mon Apr 01 06:06:55.939719 2024] [wsgi:error] [pid 13020:tid 944] [remote 192.168.0.155:53164] Internal Server Error: /api/add_lpn/\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:55.939719 2024] [wsgi:error] [pid 13020:tid 944] [remote 192.168.0.155:53164] Traceback (most recent call last):\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:55.939719 2024] [wsgi:error] [pid 13020:tid 944] [remote 192.168.0.155:53164]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\exception.py", line 55, in inner\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:55.939719 2024] [wsgi:error] [pid 13020:tid 944] [remote 192.168.0.155:53164]     response = get_response(request)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:55.939719 2024] [wsgi:error] [pid 13020:tid 944] [remote 192.168.0.155:53164]                ^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:55.939719 2024] [wsgi:error] [pid 13020:tid 944] [remote 192.168.0.155:53164]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\core\\handlers\\base.py", line 197, in _get_response\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:55.939719 2024] [wsgi:error] [pid 13020:tid 944] [remote 192.168.0.155:53164]     response = wrapped_callback(request, *callback_args, **callback_kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:55.939719 2024] [wsgi:error] [pid 13020:tid 944] [remote 192.168.0.155:53164]                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:55.939719 2024] [wsgi:error] [pid 13020:tid 944] [remote 192.168.0.155:53164]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\venv\\Lib\\site-packages\\django\\views\\decorators\\csrf.py", line 65, in _view_wrapper\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:55.939719 2024] [wsgi:error] [pid 13020:tid 944] [remote 192.168.0.155:53164]     return view_func(request, *args, **kwargs)\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:55.939719 2024] [wsgi:error] [pid 13020:tid 944] [remote 192.168.0.155:53164]            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:55.939719 2024] [wsgi:error] [pid 13020:tid 944] [remote 192.168.0.155:53164]   File "C:\\Users\\ZebraTest\\Desktop\\zebraWebPrint\\userPrint\\views.py", line 25, in add_lpn\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:06:55.939719 2024] [wsgi:error] [pid 13020:tid 944] [remote 192.168.0.155:53164] TypeError: print() takes 1 positional argument but 2 were given\r, referer: https://grl-zebraprint.com:4443/userPrint
+[Mon Apr 01 06:07:56.933266 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 06:07:56.933266 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 06:07:57.547525 2024] [ssl:warn] [pid 14216:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 06:07:57.547525 2024] [ssl:warn] [pid 14216:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 06:07:57.576945 2024] [ssl:warn] [pid 14216:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 06:07:57.576945 2024] [ssl:warn] [pid 14216:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 06:39:34.294604 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 06:39:34.294604 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 06:39:34.926133 2024] [ssl:warn] [pid 3420:tid 432] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 06:39:34.927133 2024] [ssl:warn] [pid 3420:tid 432] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 06:39:34.955135 2024] [ssl:warn] [pid 3420:tid 432] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 06:39:34.955135 2024] [ssl:warn] [pid 3420:tid 432] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 06:45:47.210532 2024] [wsgi:error] [pid 3420:tid 916] [remote 192.168.0.155:55643] Not Found: /\r
+[Mon Apr 01 06:48:08.947163 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 06:48:08.947163 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 06:48:09.681327 2024] [ssl:warn] [pid 11248:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 06:48:09.681327 2024] [ssl:warn] [pid 11248:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 06:48:09.712543 2024] [ssl:warn] [pid 11248:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 06:48:09.712543 2024] [ssl:warn] [pid 11248:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 06:48:16.166494 2024] [wsgi:error] [pid 11248:tid 916] [remote 192.168.0.155:55810] Not Found: /\r
+[Mon Apr 01 07:00:47.289199 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:00:47.289199 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:00:47.912188 2024] [ssl:warn] [pid 14144:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:00:47.912188 2024] [ssl:warn] [pid 14144:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:00:47.941566 2024] [ssl:warn] [pid 14144:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:00:47.941566 2024] [ssl:warn] [pid 14144:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:00:51.952221 2024] [wsgi:error] [pid 14144:tid 1064] [remote 192.168.0.155:56591] Not Found: /userPrint\r
+[Mon Apr 01 07:07:49.644516 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:07:49.644516 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:07:50.275260 2024] [ssl:warn] [pid 2720:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:07:50.275260 2024] [ssl:warn] [pid 2720:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:07:50.336728 2024] [ssl:warn] [pid 2720:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:07:50.336728 2024] [ssl:warn] [pid 2720:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:10:30.153553 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:10:30.153553 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:10:30.784817 2024] [ssl:warn] [pid 1716:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:10:30.785816 2024] [ssl:warn] [pid 1716:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:10:30.819501 2024] [ssl:warn] [pid 1716:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:10:30.819501 2024] [ssl:warn] [pid 1716:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:11:39.152620 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:11:39.152620 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:11:39.779255 2024] [ssl:warn] [pid 13604:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:11:39.779255 2024] [ssl:warn] [pid 13604:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:11:39.810563 2024] [ssl:warn] [pid 13604:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:11:39.810563 2024] [ssl:warn] [pid 13604:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:13:02.397904 2024] [wsgi:error] [pid 13604:tid 936] [remote 192.168.0.155:57123] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 07:13:32.166505 2024] [wsgi:error] [pid 13604:tid 956] [remote 192.168.0.155:57157] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 07:13:51.133609 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:13:51.133609 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:13:51.964649 2024] [ssl:warn] [pid 5288:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:13:51.965579 2024] [ssl:warn] [pid 5288:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:13:52.001297 2024] [ssl:warn] [pid 5288:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:13:52.001297 2024] [ssl:warn] [pid 5288:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:14:24.397094 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:14:24.397094 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:14:25.380297 2024] [ssl:warn] [pid 13576:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:14:25.381297 2024] [ssl:warn] [pid 13576:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:14:25.450670 2024] [ssl:warn] [pid 13576:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:14:25.450670 2024] [ssl:warn] [pid 13576:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:14:30.852922 2024] [wsgi:error] [pid 13576:tid 920] [remote 192.168.0.155:57208] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 07:14:49.795297 2024] [wsgi:error] [pid 13576:tid 924] [remote 192.168.0.155:57230] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 07:14:54.781564 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:14:54.781564 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:14:55.593067 2024] [ssl:warn] [pid 14164:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:14:55.594067 2024] [ssl:warn] [pid 14164:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:14:55.632067 2024] [ssl:warn] [pid 14164:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:14:55.632067 2024] [ssl:warn] [pid 14164:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:14:58.239964 2024] [wsgi:error] [pid 14164:tid 920] [remote 192.168.0.155:57240] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 07:24:24.814920 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:24:24.814920 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:24:25.813804 2024] [ssl:warn] [pid 10116:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:24:25.813804 2024] [ssl:warn] [pid 10116:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:24:25.866800 2024] [ssl:warn] [pid 10116:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:24:25.866800 2024] [ssl:warn] [pid 10116:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:24:32.096244 2024] [wsgi:error] [pid 10116:tid 968] [remote 192.168.0.155:57596] Not Found: /adminPrint/admin\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 07:25:06.878645 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:25:06.878645 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:25:07.504019 2024] [ssl:warn] [pid 12500:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:25:07.505021 2024] [ssl:warn] [pid 12500:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:25:07.536357 2024] [ssl:warn] [pid 12500:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:25:07.536357 2024] [ssl:warn] [pid 12500:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:25:18.003105 2024] [wsgi:error] [pid 12500:tid 924] [remote 192.168.0.155:57627] Not Found: / admin\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 07:25:35.773843 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:25:35.773843 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:25:37.175270 2024] [ssl:warn] [pid 11768:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:25:37.176272 2024] [ssl:warn] [pid 11768:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:25:37.278489 2024] [ssl:warn] [pid 11768:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:25:37.278489 2024] [ssl:warn] [pid 11768:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:25:38.972653 2024] [wsgi:error] [pid 11768:tid 972] [remote 192.168.0.155:57650] Not Found: / admin\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 07:26:34.472961 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:26:34.472961 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:26:35.109400 2024] [ssl:warn] [pid 9032:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:26:35.110400 2024] [ssl:warn] [pid 9032:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:26:35.142056 2024] [ssl:warn] [pid 9032:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:26:35.142056 2024] [ssl:warn] [pid 9032:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:29:46.006649 2024] [wsgi:error] [pid 9032:tid 1164] [remote 192.168.0.155:57861] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 07:38:44.204884 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:38:44.204884 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:38:44.835007 2024] [ssl:warn] [pid 6632:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:38:44.836007 2024] [ssl:warn] [pid 6632:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:38:44.868335 2024] [ssl:warn] [pid 6632:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:38:44.868335 2024] [ssl:warn] [pid 6632:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:40:28.995737 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:40:28.995737 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:40:29.634047 2024] [ssl:warn] [pid 8600:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:40:29.635047 2024] [ssl:warn] [pid 8600:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:40:29.667703 2024] [ssl:warn] [pid 8600:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:40:29.667703 2024] [ssl:warn] [pid 8600:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:41:23.026770 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:41:23.026770 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:41:23.678322 2024] [ssl:warn] [pid 12968:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:41:23.679322 2024] [ssl:warn] [pid 12968:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:41:23.711071 2024] [ssl:warn] [pid 12968:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:41:23.711071 2024] [ssl:warn] [pid 12968:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:43:02.978970 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:43:02.978970 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:43:03.605176 2024] [ssl:warn] [pid 5132:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:43:03.606220 2024] [ssl:warn] [pid 5132:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:43:03.637413 2024] [ssl:warn] [pid 5132:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:43:03.637413 2024] [ssl:warn] [pid 5132:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:46:23.513081 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:46:23.514075 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:46:24.142906 2024] [ssl:warn] [pid 5400:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:46:24.143910 2024] [ssl:warn] [pid 5400:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:46:24.175209 2024] [ssl:warn] [pid 5400:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:46:24.175209 2024] [ssl:warn] [pid 5400:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:48:55.321157 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:48:55.322157 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:48:55.971694 2024] [ssl:warn] [pid 2604:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:48:55.972694 2024] [ssl:warn] [pid 2604:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:48:56.005364 2024] [ssl:warn] [pid 2604:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:48:56.005364 2024] [ssl:warn] [pid 2604:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:50:10.434196 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:50:10.434196 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:50:11.784202 2024] [ssl:warn] [pid 14020:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:50:11.785202 2024] [ssl:warn] [pid 14020:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:50:11.864109 2024] [ssl:warn] [pid 14020:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:50:11.864109 2024] [ssl:warn] [pid 14020:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:53:22.819246 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:53:22.819246 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:53:23.456153 2024] [ssl:warn] [pid 8780:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:53:23.457153 2024] [ssl:warn] [pid 8780:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:53:23.493786 2024] [ssl:warn] [pid 8780:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 07:53:23.493786 2024] [ssl:warn] [pid 8780:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 07:58:46.762620 2024] [wsgi:error] [pid 8780:tid 944] [remote 192.168.0.155:59648] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 08:05:20.427089 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 08:05:20.427089 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 08:05:21.083698 2024] [ssl:warn] [pid 3948:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 08:05:21.084745 2024] [ssl:warn] [pid 3948:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 08:05:21.116432 2024] [ssl:warn] [pid 3948:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 08:05:21.116432 2024] [ssl:warn] [pid 3948:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 08:08:16.522161 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 08:08:16.522161 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 08:08:18.045375 2024] [ssl:warn] [pid 4308:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 08:08:18.046374 2024] [ssl:warn] [pid 4308:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 08:08:18.086015 2024] [ssl:warn] [pid 4308:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 08:08:18.086015 2024] [ssl:warn] [pid 4308:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 08:15:08.092103 2024] [wsgi:error] [pid 4308:tid 968] [remote 192.168.0.155:60710] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 08:16:19.239715 2024] [wsgi:error] [pid 4308:tid 972] [remote 192.168.0.155:60784] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 08:16:21.173453 2024] [wsgi:error] [pid 4308:tid 976] [remote 192.168.0.155:60784] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 08:16:31.737653 2024] [wsgi:error] [pid 4308:tid 1000] [remote 192.168.0.155:60784] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 08:18:48.949276 2024] [wsgi:error] [pid 4308:tid 1048] [remote 192.168.0.155:60989] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 08:27:18.238018 2024] [wsgi:error] [pid 4308:tid 1084] [remote 192.168.0.155:61462] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 08:27:29.552455 2024] [wsgi:error] [pid 4308:tid 1088] [remote 192.168.0.155:61488] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 08:28:28.036674 2024] [wsgi:error] [pid 4308:tid 1092] [remote 192.168.0.155:61553] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 08:28:34.048967 2024] [wsgi:error] [pid 4308:tid 1100] [remote 192.168.0.155:61553] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 08:28:59.266839 2024] [wsgi:error] [pid 4308:tid 1104] [remote 192.168.0.155:61595] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 08:29:42.690158 2024] [wsgi:error] [pid 4308:tid 1124] [remote 192.168.0.155:61653] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 08:30:02.910920 2024] [wsgi:error] [pid 4308:tid 1144] [remote 192.168.0.155:61677] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 08:30:20.736524 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 08:30:20.736524 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 08:30:21.503667 2024] [ssl:warn] [pid 11320:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 08:30:21.504667 2024] [ssl:warn] [pid 11320:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 08:30:21.542276 2024] [ssl:warn] [pid 11320:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 08:30:21.542276 2024] [ssl:warn] [pid 11320:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:10:27.502375 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:10:27.502375 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:10:28.140411 2024] [ssl:warn] [pid 2228:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:10:28.141411 2024] [ssl:warn] [pid 2228:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:10:28.175140 2024] [ssl:warn] [pid 2228:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:10:28.175140 2024] [ssl:warn] [pid 2228:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:14:41.950414 2024] [wsgi:error] [pid 2228:tid 1036] [remote 192.168.0.155:63925] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 09:15:20.844005 2024] [wsgi:error] [pid 2228:tid 168] [remote 192.168.0.155:63981] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 09:16:12.311359 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:16:12.311359 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:16:12.969237 2024] [ssl:warn] [pid 13000:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:16:12.970237 2024] [ssl:warn] [pid 13000:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:16:13.005138 2024] [ssl:warn] [pid 13000:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:16:13.005138 2024] [ssl:warn] [pid 13000:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:16:16.888767 2024] [wsgi:error] [pid 13000:tid 1004] [remote 192.168.0.155:64041] Not Found: /adminPrint/print\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 09:18:40.130299 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:18:40.130299 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:18:41.253720 2024] [ssl:warn] [pid 7084:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:18:41.254721 2024] [ssl:warn] [pid 7084:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:18:41.303283 2024] [ssl:warn] [pid 7084:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:18:41.303283 2024] [ssl:warn] [pid 7084:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:28:25.787114 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:28:25.787114 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:28:26.416025 2024] [ssl:warn] [pid 1164:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:28:26.417029 2024] [ssl:warn] [pid 1164:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:28:26.450353 2024] [ssl:warn] [pid 1164:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:28:26.450353 2024] [ssl:warn] [pid 1164:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:31:21.316449 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:31:21.316449 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:31:22.464347 2024] [ssl:warn] [pid 6384:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:31:22.465347 2024] [ssl:warn] [pid 6384:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:31:22.497118 2024] [ssl:warn] [pid 6384:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:31:22.497118 2024] [ssl:warn] [pid 6384:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:33:19.157544 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:33:19.157544 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:33:19.978169 2024] [ssl:warn] [pid 4716:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:33:19.979169 2024] [ssl:warn] [pid 4716:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:33:20.011906 2024] [ssl:warn] [pid 4716:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:33:20.011906 2024] [ssl:warn] [pid 4716:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:34:33.662924 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:34:33.662924 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:34:34.887956 2024] [ssl:warn] [pid 1472:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:34:34.888956 2024] [ssl:warn] [pid 1472:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:34:34.941466 2024] [ssl:warn] [pid 1472:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:34:34.941466 2024] [ssl:warn] [pid 1472:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:36:18.122352 2024] [wsgi:error] [pid 1472:tid 972] [remote 192.168.0.155:65330] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/
+[Mon Apr 01 09:38:21.574196 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:38:21.574196 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:38:22.331630 2024] [ssl:warn] [pid 12552:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:38:22.332630 2024] [ssl:warn] [pid 12552:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:38:22.365665 2024] [ssl:warn] [pid 12552:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:38:22.365665 2024] [ssl:warn] [pid 12552:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:43:06.932525 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:43:06.932525 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:43:07.561892 2024] [ssl:warn] [pid 9856:tid 432] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:43:07.562891 2024] [ssl:warn] [pid 9856:tid 432] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:43:07.599908 2024] [ssl:warn] [pid 9856:tid 432] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:43:07.600877 2024] [ssl:warn] [pid 9856:tid 432] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:48:23.626721 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:48:23.627723 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:48:24.481428 2024] [ssl:warn] [pid 6176:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:48:24.482428 2024] [ssl:warn] [pid 6176:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:48:24.514762 2024] [ssl:warn] [pid 6176:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:48:24.514762 2024] [ssl:warn] [pid 6176:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:50:21.635498 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:50:21.635498 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:50:22.263946 2024] [ssl:warn] [pid 8408:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:50:22.264946 2024] [ssl:warn] [pid 8408:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:50:22.296646 2024] [ssl:warn] [pid 8408:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:50:22.296646 2024] [ssl:warn] [pid 8408:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:52:29.974173 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:52:29.974173 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:52:30.601306 2024] [ssl:warn] [pid 13728:tid 436] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:52:30.602306 2024] [ssl:warn] [pid 13728:tid 436] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:52:30.635025 2024] [ssl:warn] [pid 13728:tid 436] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:52:30.635025 2024] [ssl:warn] [pid 13728:tid 436] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:53:15.428149 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:53:15.428149 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:53:16.101196 2024] [ssl:warn] [pid 6452:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:53:16.102196 2024] [ssl:warn] [pid 6452:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:53:16.132840 2024] [ssl:warn] [pid 6452:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:53:16.132840 2024] [ssl:warn] [pid 6452:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:53:31.645484 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:53:31.645484 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:53:32.481348 2024] [ssl:warn] [pid 13684:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:53:32.483159 2024] [ssl:warn] [pid 13684:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:53:32.519716 2024] [ssl:warn] [pid 13684:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:53:32.519716 2024] [ssl:warn] [pid 13684:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:55:59.975673 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:55:59.975673 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:56:00.608562 2024] [ssl:warn] [pid 12540:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:56:00.609560 2024] [ssl:warn] [pid 12540:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 09:56:00.641530 2024] [ssl:warn] [pid 12540:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 09:56:00.641530 2024] [ssl:warn] [pid 12540:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:01:31.608397 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:01:31.608431 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:01:32.232610 2024] [ssl:warn] [pid 8808:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:01:32.233609 2024] [ssl:warn] [pid 8808:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:01:32.265265 2024] [ssl:warn] [pid 8808:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:01:32.265265 2024] [ssl:warn] [pid 8808:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:09:15.804259 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:09:15.804259 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:09:16.435006 2024] [ssl:warn] [pid 2324:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:09:16.436007 2024] [ssl:warn] [pid 2324:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:09:16.469068 2024] [ssl:warn] [pid 2324:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:09:16.469068 2024] [ssl:warn] [pid 2324:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:33:47.808420 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:33:47.808420 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:33:48.688842 2024] [ssl:warn] [pid 13176:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:33:48.689843 2024] [ssl:warn] [pid 13176:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:33:48.722861 2024] [ssl:warn] [pid 13176:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:33:48.722861 2024] [ssl:warn] [pid 13176:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:35:10.036747 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:35:10.036747 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:35:11.121826 2024] [ssl:warn] [pid 5608:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:35:11.123825 2024] [ssl:warn] [pid 5608:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:35:11.175921 2024] [ssl:warn] [pid 5608:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:35:11.175921 2024] [ssl:warn] [pid 5608:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:36:38.753000 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:36:38.753000 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:36:39.597496 2024] [ssl:warn] [pid 11812:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:36:39.598496 2024] [ssl:warn] [pid 11812:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:36:39.637614 2024] [ssl:warn] [pid 11812:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:36:39.637614 2024] [ssl:warn] [pid 11812:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:36:46.747690 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:36:46.748690 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:36:47.467683 2024] [ssl:warn] [pid 4668:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:36:47.468683 2024] [ssl:warn] [pid 4668:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:36:47.500027 2024] [ssl:warn] [pid 4668:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:36:47.501027 2024] [ssl:warn] [pid 4668:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:39:30.126998 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:39:30.126998 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:39:30.752826 2024] [ssl:warn] [pid 14052:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:39:30.753826 2024] [ssl:warn] [pid 14052:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:39:30.786661 2024] [ssl:warn] [pid 14052:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:39:30.786661 2024] [ssl:warn] [pid 14052:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:39:43.322992 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:39:43.322992 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:39:44.037877 2024] [ssl:warn] [pid 10972:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:39:44.038875 2024] [ssl:warn] [pid 10972:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:39:44.074563 2024] [ssl:warn] [pid 10972:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:39:44.074563 2024] [ssl:warn] [pid 10972:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:48:47.131051 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:48:47.131051 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:48:47.786478 2024] [ssl:warn] [pid 11272:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:48:47.788477 2024] [ssl:warn] [pid 11272:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 10:48:47.822476 2024] [ssl:warn] [pid 11272:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 10:48:47.822476 2024] [ssl:warn] [pid 11272:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:05:34.779072 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:05:34.779072 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:05:35.423188 2024] [ssl:warn] [pid 13032:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:05:35.424188 2024] [ssl:warn] [pid 13032:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:05:35.459388 2024] [ssl:warn] [pid 13032:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:05:35.459388 2024] [ssl:warn] [pid 13032:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:09:02.890693 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:09:02.891692 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:09:03.556377 2024] [ssl:warn] [pid 14060:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:09:03.557376 2024] [ssl:warn] [pid 14060:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:09:03.594283 2024] [ssl:warn] [pid 14060:tid 452] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:09:03.595283 2024] [ssl:warn] [pid 14060:tid 452] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:18:42.646419 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:18:42.646419 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:18:43.287278 2024] [ssl:warn] [pid 12648:tid 464] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:18:43.288278 2024] [ssl:warn] [pid 12648:tid 464] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:18:43.320944 2024] [ssl:warn] [pid 12648:tid 464] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:18:43.320944 2024] [ssl:warn] [pid 12648:tid 464] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:20:07.388428 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:20:07.388428 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:20:08.034569 2024] [ssl:warn] [pid 7844:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:20:08.034569 2024] [ssl:warn] [pid 7844:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:20:08.067867 2024] [ssl:warn] [pid 7844:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:20:08.067867 2024] [ssl:warn] [pid 7844:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:25:33.603864 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:25:33.603864 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:25:34.237874 2024] [ssl:warn] [pid 5520:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:25:34.238874 2024] [ssl:warn] [pid 5520:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:25:34.276882 2024] [ssl:warn] [pid 5520:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:25:34.276882 2024] [ssl:warn] [pid 5520:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:35:26.421235 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:35:26.421235 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:35:27.056142 2024] [ssl:warn] [pid 5536:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:35:27.057142 2024] [ssl:warn] [pid 5536:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:35:27.089811 2024] [ssl:warn] [pid 5536:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:35:27.089811 2024] [ssl:warn] [pid 5536:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:36:48.471174 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:36:48.471174 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:36:49.461938 2024] [ssl:warn] [pid 13956:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:36:49.462938 2024] [ssl:warn] [pid 13956:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:36:49.640874 2024] [ssl:warn] [pid 13956:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:36:49.640874 2024] [ssl:warn] [pid 13956:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:42:52.910550 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:42:52.910550 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:42:54.029245 2024] [ssl:warn] [pid 4968:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:42:54.030245 2024] [ssl:warn] [pid 4968:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:42:54.067598 2024] [ssl:warn] [pid 4968:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:42:54.067598 2024] [ssl:warn] [pid 4968:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:44:43.729718 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:44:43.729718 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:44:44.358181 2024] [ssl:warn] [pid 13812:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:44:44.359181 2024] [ssl:warn] [pid 13812:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:44:44.386920 2024] [ssl:warn] [pid 13812:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:44:44.386920 2024] [ssl:warn] [pid 13812:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:47:47.373845 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:47:47.373845 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:47:48.540334 2024] [ssl:warn] [pid 14868:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:47:48.542716 2024] [ssl:warn] [pid 14868:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:47:48.647073 2024] [ssl:warn] [pid 14868:tid 428] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:47:48.647073 2024] [ssl:warn] [pid 14868:tid 428] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:49:15.905759 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:49:15.905759 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:49:16.563097 2024] [ssl:warn] [pid 12372:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:49:16.564097 2024] [ssl:warn] [pid 12372:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:49:16.600480 2024] [ssl:warn] [pid 12372:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:49:16.600480 2024] [ssl:warn] [pid 12372:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:52:08.778204 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:52:08.778204 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:52:09.564028 2024] [ssl:warn] [pid 11364:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:52:09.565028 2024] [ssl:warn] [pid 11364:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 11:52:09.601026 2024] [ssl:warn] [pid 11364:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 11:52:09.601026 2024] [ssl:warn] [pid 11364:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 12:51:20.451526 2024] [ssl:warn] [pid 3580:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 12:51:20.451526 2024] [ssl:warn] [pid 3580:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 12:51:21.233522 2024] [ssl:warn] [pid 3464:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 12:51:21.234522 2024] [ssl:warn] [pid 3464:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 12:51:21.270522 2024] [ssl:warn] [pid 3464:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 12:51:21.270522 2024] [ssl:warn] [pid 3464:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 12:52:11.989979 2024] [ssl:warn] [pid 3796:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 12:52:11.989979 2024] [ssl:warn] [pid 3796:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 12:52:12.021219 2024] [ssl:warn] [pid 3796:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 12:52:12.021219 2024] [ssl:warn] [pid 3796:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 12:52:13.676936 2024] [ssl:warn] [pid 4964:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 12:52:13.676936 2024] [ssl:warn] [pid 4964:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 12:52:13.786276 2024] [ssl:warn] [pid 4964:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 12:52:13.786276 2024] [ssl:warn] [pid 4964:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 12:55:49.132110 2024] [wsgi:error] [pid 4964:tid 936] [remote 192.168.0.215:61485] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/
+[Mon Apr 01 13:02:05.237408 2024] [ssl:warn] [pid 3528:tid 424] AH01906: GRLPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:02:05.237408 2024] [ssl:warn] [pid 3528:tid 424] AH01909: GRLPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:02:05.268649 2024] [ssl:warn] [pid 3528:tid 424] AH01906: GRLPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:02:05.268649 2024] [ssl:warn] [pid 3528:tid 424] AH01909: GRLPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:02:06.692616 2024] [ssl:warn] [pid 4548:tid 448] AH01906: GRLPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:02:06.692616 2024] [ssl:warn] [pid 4548:tid 448] AH01909: GRLPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:02:06.723864 2024] [ssl:warn] [pid 4548:tid 448] AH01906: GRLPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:02:06.723864 2024] [ssl:warn] [pid 4548:tid 448] AH01909: GRLPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:08:15.700691 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:08:15.700691 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:08:15.810031 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:08:15.810031 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:08:17.728232 2024] [ssl:warn] [pid 4976:tid 448] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:08:17.728232 2024] [ssl:warn] [pid 4976:tid 448] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:08:17.868811 2024] [ssl:warn] [pid 4976:tid 448] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:08:17.868811 2024] [ssl:warn] [pid 4976:tid 448] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:10:14.001075 2024] [wsgi:error] [pid 4976:tid 932] [remote 192.168.0.155:49805] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/
+[Mon Apr 01 13:17:50.308688 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:17:50.308688 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:17:51.059539 2024] [ssl:warn] [pid 8396:tid 432] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:17:51.059539 2024] [ssl:warn] [pid 8396:tid 432] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:17:51.092660 2024] [ssl:warn] [pid 8396:tid 432] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:17:51.092660 2024] [ssl:warn] [pid 8396:tid 432] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:31:33.848009 2024] [wsgi:error] [pid 8396:tid 964] [remote 192.168.0.215:49969] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/
+[Mon Apr 01 13:31:43.574487 2024] [wsgi:error] [pid 8396:tid 1008] [remote 192.168.0.215:49988] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/admin/login/?next=/admin/
+[Mon Apr 01 13:31:46.193937 2024] [wsgi:error] [pid 8396:tid 1016] [remote 192.168.0.215:49988] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 13:32:38.493611 2024] [wsgi:error] [pid 8396:tid 1108] [remote 192.168.0.215:50029] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 13:38:09.368021 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:38:09.368021 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:38:10.022442 2024] [ssl:warn] [pid 4336:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:38:10.022442 2024] [ssl:warn] [pid 4336:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:38:10.051990 2024] [ssl:warn] [pid 4336:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:38:10.051990 2024] [ssl:warn] [pid 4336:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:38:23.064967 2024] [wsgi:error] [pid 4336:tid 944] [remote 192.168.0.215:50338] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 13:39:06.582381 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:39:06.583377 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:39:07.205681 2024] [ssl:warn] [pid 6168:tid 448] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:39:07.205681 2024] [ssl:warn] [pid 6168:tid 448] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:39:07.234829 2024] [ssl:warn] [pid 6168:tid 448] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:39:07.234829 2024] [ssl:warn] [pid 6168:tid 448] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:39:17.175262 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:39:17.175262 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:39:17.795354 2024] [ssl:warn] [pid 2484:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:39:17.795354 2024] [ssl:warn] [pid 2484:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:39:17.824780 2024] [ssl:warn] [pid 2484:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:39:17.824780 2024] [ssl:warn] [pid 2484:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:39:22.474059 2024] [wsgi:error] [pid 2484:tid 932] [remote 192.168.3.215:50460] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 13:42:26.848373 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:42:26.848373 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:42:27.512174 2024] [ssl:warn] [pid 8368:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:42:27.512174 2024] [ssl:warn] [pid 8368:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:42:27.542966 2024] [ssl:warn] [pid 8368:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:42:27.542966 2024] [ssl:warn] [pid 8368:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:45:10.631998 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:45:10.631998 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:45:11.241181 2024] [ssl:warn] [pid 6944:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:45:11.241181 2024] [ssl:warn] [pid 6944:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:45:11.272421 2024] [ssl:warn] [pid 6944:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:45:11.272421 2024] [ssl:warn] [pid 6944:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:46:35.342466 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:46:35.342466 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:46:35.958875 2024] [ssl:warn] [pid 6408:tid 444] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:46:35.958875 2024] [ssl:warn] [pid 6408:tid 444] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:46:35.988418 2024] [ssl:warn] [pid 6408:tid 444] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:46:35.988418 2024] [ssl:warn] [pid 6408:tid 444] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:49:58.737218 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:49:58.737218 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:49:59.358796 2024] [ssl:warn] [pid 6920:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:49:59.358796 2024] [ssl:warn] [pid 6920:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:49:59.389571 2024] [ssl:warn] [pid 6920:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:49:59.389571 2024] [ssl:warn] [pid 6920:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:50:59.762771 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:50:59.762771 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:51:00.393177 2024] [ssl:warn] [pid 8968:tid 432] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:51:00.394170 2024] [ssl:warn] [pid 8968:tid 432] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:51:00.423625 2024] [ssl:warn] [pid 8968:tid 432] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:51:00.423625 2024] [ssl:warn] [pid 8968:tid 432] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:53:17.860110 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:53:17.860110 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:53:18.479329 2024] [ssl:warn] [pid 116:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:53:18.479329 2024] [ssl:warn] [pid 116:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:53:18.508806 2024] [ssl:warn] [pid 116:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:53:18.508806 2024] [ssl:warn] [pid 116:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:58:45.423097 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:58:45.423097 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:58:46.035521 2024] [ssl:warn] [pid 8196:tid 436] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:58:46.035521 2024] [ssl:warn] [pid 8196:tid 436] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 13:58:46.064726 2024] [ssl:warn] [pid 8196:tid 436] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 13:58:46.064726 2024] [ssl:warn] [pid 8196:tid 436] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 14:07:04.846060 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 14:07:04.846060 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 14:07:05.463518 2024] [ssl:warn] [pid 1328:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 14:07:05.463518 2024] [ssl:warn] [pid 1328:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 14:07:05.492887 2024] [ssl:warn] [pid 1328:tid 440] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 14:07:05.492887 2024] [ssl:warn] [pid 1328:tid 440] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 14:11:35.605997 2024] [ssl:warn] [pid 3780:tid 408] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 14:11:35.605997 2024] [ssl:warn] [pid 3780:tid 408] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 14:11:36.223507 2024] [ssl:warn] [pid 2256:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 14:11:36.224535 2024] [ssl:warn] [pid 2256:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 14:11:36.254694 2024] [ssl:warn] [pid 2256:tid 424] AH01906: GRL-ZebraPrint.com:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon Apr 01 14:11:36.254694 2024] [ssl:warn] [pid 2256:tid 424] AH01909: GRL-ZebraPrint.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Apr 01 14:13:39.461524 2024] [wsgi:error] [pid 2256:tid 984] [remote 192.168.3.215:51944] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/adminPrint/
+[Mon Apr 01 14:14:18.153844 2024] [wsgi:error] [pid 2256:tid 1020] [remote 192.168.3.215:51971] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/adminPrint/
