@@ -13708,3 +13708,4 @@
 [Wed Apr 22 12:36:08.004938 2026] [wsgi:error] [pid 4912:tid 1152] [remote 192.168.0.154:58018] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/
 [Fri Apr 24 08:31:42.898854 2026] [wsgi:error] [pid 4912:tid 484] [remote 192.168.0.63:58121] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/
 [Sun Apr 26 12:03:40.829159 2026] [wsgi:error] [pid 4912:tid 1168] [remote 192.168.0.199:51471] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/
+[Sun Apr 26 13:51:22.386426 2026] [wsgi:error] [pid 4912:tid 980] [remote 192.168.0.42:48524] Not Found: /favicon.ico\r, referer: https://grl-zebraprint.com/
