@@ -1,5 +1,5 @@
 // This file is used to interact with the Zebra Browser Print SDK
-// It is used to print custom LPNs and generate LPNs from the server
+// It is used to print and generate custom LPNs
 
 //Select the printer
 var selected_device;
@@ -241,6 +241,21 @@ var selected_device;
         @param {string} dataToWrite - The data to be written to the printer
         */
         function writeToSelectedPrinter(dataToWrite) {
+            let firstIndex = dataToWrite.indexOf("^XA^CF0,40^");
+            let lastIndex = dataToWrite.lastIndexOf("^XA^CF0,40^");
+
+            if (firstIndex !== -1 && firstIndex === lastIndex) {
+                let insertAfter = firstIndex + 3;
+                dataToWrite = dataToWrite.substring(0, insertAfter) + "^MMc" + dataToWrite.substring(insertAfter);
+            } else if (firstIndex !== -1) {
+                let insertAfterFirst = firstIndex + 3;
+                dataToWrite = dataToWrite.substring(0, insertAfterFirst) + "^MMt" + dataToWrite.substring(insertAfterFirst);
+
+                lastIndex = dataToWrite.lastIndexOf("^XA^CF0,40^");
+
+                let insertAfterLast = lastIndex + 3; 
+                dataToWrite = dataToWrite.substring(0, insertAfterLast) + "^MMc" + dataToWrite.substring(insertAfterLast);
+            }
             selected_device.send(dataToWrite, undefined, function(errorMessage){});
         }
 
@@ -275,6 +290,7 @@ var selected_device;
 
         /*
         * Gets the device list in an alert format
+        @param {array} deviceList - The list of devices
         */
         function getDeviceCallback(deviceList)
         {
@@ -283,6 +299,7 @@ var selected_device;
         
         /*
         * Gets the device list
+        @param {array} deviceList - The list of devices
         @returns {Promise} - The promise that resolves to the device list
         */
         function onDeviceSelected(selected)
@@ -302,3 +319,5 @@ var selected_device;
             }, function(error){});
         }
         window.onload = setup;
+
+        

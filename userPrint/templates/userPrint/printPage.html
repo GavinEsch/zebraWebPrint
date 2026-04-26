@@ -28,19 +28,24 @@
                 </hgroup>
                 <p>Select Number of LPNs to print, which printer to print to, and click print.</p>
                 <article>
-                    <form method="post">
+                    <form id="lpnForm" method="post">
                         {% csrf_token %}
                         <fieldset role="group">
                             <select id="LPNquantity" required>
                                 <option value="1">1</option>
                                 <option value="5">5</option>
                                 <option value="10">10</option>
+                                <option value="100">100</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
                             </select>
-                            <select id="selected_device" onchange=onDeviceSelected(this); required></select><!--  <input type="button" value="Change" onclick="changeDevice();">--> <br/><br/>
-                            <input type="button" value="Print" onclick="getLPNs()"><br/><br/>
+                            <select id="selected_device" onchange="onDeviceSelected(this);" required></select>
+                            <br/><br/>
+                            <input type="button" value="Print" onclick="getLPNs()">
+                            <br/><br/>
                         </fieldset>
                     </form>
-                <article>
+                </article>
                 <div>
                     <h3>Status:</h3>
                     <p id="print_status" >Waiting for input...</p>

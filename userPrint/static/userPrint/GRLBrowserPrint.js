@@ -241,6 +241,21 @@ var selected_device;
         @param {string} dataToWrite - The data to be written to the printer
         */
         function writeToSelectedPrinter(dataToWrite) {
+            let firstIndex = dataToWrite.indexOf("^XA^CF0,40^");
+            let lastIndex = dataToWrite.lastIndexOf("^XA^CF0,40^");
+
+            if (firstIndex !== -1 && firstIndex === lastIndex) {
+                let insertAfter = firstIndex + 3;
+                dataToWrite = dataToWrite.substring(0, insertAfter) + "^MMc" + dataToWrite.substring(insertAfter);
+            } else if (firstIndex !== -1) {
+                let insertAfterFirst = firstIndex + 3;
+                dataToWrite = dataToWrite.substring(0, insertAfterFirst) + "^MMt" + dataToWrite.substring(insertAfterFirst);
+
+                lastIndex = dataToWrite.lastIndexOf("^XA^CF0,40^");
+
+                let insertAfterLast = lastIndex + 3; 
+                dataToWrite = dataToWrite.substring(0, insertAfterLast) + "^MMc" + dataToWrite.substring(insertAfterLast);
+            }
             selected_device.send(dataToWrite, undefined, function(errorMessage){});
         }
 
@@ -304,3 +319,5 @@ var selected_device;
             }, function(error){});
         }
         window.onload = setup;
+
+        
