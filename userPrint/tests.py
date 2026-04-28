@@ -3,7 +3,7 @@ import json
 from django.test import TestCase
 from django.urls import reverse
 
-from .models import LPN, PrintJob
+from .models import LPN, LPNSuffix, PrintJob
 
 
 class ReserveLPNTests(TestCase):
@@ -19,13 +19,30 @@ class ReserveLPNTests(TestCase):
         self.assertEqual(data['status'], 'success')
         self.assertEqual(len(data['lpns']), 10)
         self.assertEqual(len(set(data['lpns'])), 10)
+        self.assertEqual(len({lpn[-6:] for lpn in data['lpns']}), 10)
         self.assertIn('job_id', data)
         self.assertEqual(LPN.objects.count(), 10)
+        self.assertEqual(LPNSuffix.objects.count(), 10)
         self.assertEqual(PrintJob.objects.count(), 1)
         print_job = PrintJob.objects.get()
         self.assertEqual(print_job.status, PrintJob.STATUS_RESERVED)
         self.assertEqual(print_job.label_count, 10)
         self.assertEqual(print_job.sent_count, 0)
+
+    def test_reserve_lpns_does_not_reuse_existing_last_six_suffix(self):
+        LPN.objects.create(full_lpn='LPNAAAAAABC123')
+        LPNSuffix.objects.create(suffix='ABC123')
+
+        response = self.client.post(
+            reverse('reserve_lpns'),
+            data=json.dumps({'count': 50}),
+            content_type='application/json',
+        )
+
+        self.assertEqual(response.status_code, 200)
+        suffixes = {full_lpn[-6:] for full_lpn in response.json()['lpns']}
+        self.assertNotIn('ABC123', suffixes)
+        self.assertEqual(len(suffixes), 50)
 
     def test_reserve_lpns_rejects_oversized_batch(self):
         response = self.client.post(

@@ -9,10 +9,11 @@ from django.shortcuts import render
 from django.utils import timezone
 from django.views.decorators.http import require_GET, require_POST
 
-from .models import LPN, PrintJob
+from .models import LPN, LPNSuffix, PrintJob
 
 LPN_PREFIX = 'LPN'
 LPN_RANDOM_LENGTH = 11
+LPN_SUFFIX_LENGTH = 6
 MAX_BATCH_SIZE = 1000
 LPN_ALPHABET = string.ascii_uppercase + string.digits
 
@@ -163,6 +164,10 @@ def generate_lpn():
     return f'{LPN_PREFIX}{suffix}'
 
 
+def lpn_suffix(full_lpn):
+    return full_lpn[-LPN_SUFFIX_LENGTH:]
+
+
 def reserve_print_job(count, printer_name, requested_by='', user_agent='', client_context=None):
     max_attempts = 20
     client_context = client_context or {}
@@ -170,11 +175,14 @@ def reserve_print_job(count, printer_name, requested_by='', user_agent='', clien
     for _ in range(max_attempts):
         candidate_count = min(MAX_BATCH_SIZE, max(count * 2, count + 10))
         candidates = []
-        seen = set()
+        seen_lpns = set()
+        seen_suffixes = set()
         while len(candidates) < candidate_count:
             candidate = generate_lpn()
-            if candidate not in seen:
-                seen.add(candidate)
+            suffix = lpn_suffix(candidate)
+            if candidate not in seen_lpns and suffix not in seen_suffixes:
+                seen_lpns.add(candidate)
+                seen_suffixes.add(suffix)
                 candidates.append(candidate)
 
         existing = set(
@@ -182,7 +190,16 @@ def reserve_print_job(count, printer_name, requested_by='', user_agent='', clien
             .filter(full_lpn__in=candidates)
             .values_list('full_lpn', flat=True)
         )
-        available = [candidate for candidate in candidates if candidate not in existing]
+        existing_suffixes = set(
+            LPNSuffix.objects
+            .filter(suffix__in=[lpn_suffix(candidate) for candidate in candidates])
+            .values_list('suffix', flat=True)
+        )
+        available = [
+            candidate
+            for candidate in candidates
+            if candidate not in existing and lpn_suffix(candidate) not in existing_suffixes
+        ]
         batch = available[:count]
 
         if len(batch) < count:
@@ -190,6 +207,10 @@ def reserve_print_job(count, printer_name, requested_by='', user_agent='', clien
 
         try:
             with transaction.atomic():
+                LPNSuffix.objects.bulk_create(
+                    [LPNSuffix(suffix=lpn_suffix(full_lpn)) for full_lpn in batch],
+                    batch_size=MAX_BATCH_SIZE,
+                )
                 print_job = PrintJob.objects.create(
                     label_count=count,
                     printer_name=printer_name,

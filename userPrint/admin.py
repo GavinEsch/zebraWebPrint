@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import LPN, PrintJob
+from .models import LPN, LPNSuffix, PrintJob
 
 """This file is used to register the LPN model with the Django admin site."""
 
@@ -88,3 +88,10 @@ class PrintJobAdmin(admin.ModelAdmin):
         return obj.lpns.count()
 
     lpn_count.short_description = 'Reserved LPNs'
+
+
+@admin.register(LPNSuffix)
+class LPNSuffixAdmin(admin.ModelAdmin):
+    list_display = ('suffix', 'created_at')
+    search_fields = ('suffix',)
+    readonly_fields = ('suffix', 'created_at')

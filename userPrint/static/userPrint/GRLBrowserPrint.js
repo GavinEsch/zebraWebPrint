@@ -272,15 +272,15 @@ var selected_device;
         */
         function  LPNTemplate(FullLPN){
 
-            //split the LPN into the first 7 characters and the last 4 characters
-            var FirstSeven = FullLPN.substr(3, 7);
-            var LastFour = FullLPN.substr(10, 4);
+            //split the LPN display into the first 5 characters after LPN and the last 6 characters
+            var FirstFive = FullLPN.substr(3, 5);
+            var LastSix = FullLPN.substr(8, 6);
 
             //ZPL template for the LPN
-            var template = '^XA^CF0,40^FO40,30^BY2^BCN,100,N,N,N^FD$FullLPN$^FS^CF0,30^FO50,140^FDLPN $FirstSeven$^FS^CF0,60^FO250,140^FD$LastFour$^FS^XZ';
+            var template = '^XA^CF0,40^FO40,30^BY2^BCN,100,N,N,N^FD$FullLPN$^FS^CF0,28^FO45,142^FDLPN $FirstFive$^FS^CF0,58^FO185,132^FD$LastSix$^FS^XZ';
 
             //replace the placeholders in the template with the LPN
-            var dataToWrite = template.replace('$FullLPN$', FullLPN).replace('$FirstSeven$', FirstSeven).replace('$LastFour$', LastFour);
+            var dataToWrite = template.replace('$FullLPN$', FullLPN).replace('$FirstFive$', FirstFive).replace('$LastSix$', LastSix);
             return dataToWrite;
         }
 

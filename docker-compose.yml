@@ -1,0 +1,43 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: zebra-web-print-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: "${POSTGRES_DB:-zebra_web_print}"
+      POSTGRES_USER: "${POSTGRES_USER:-zebra_web_print}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:-change-me}"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-zebra_web_print} -d ${POSTGRES_DB:-zebra_web_print}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build: .
+    container_name: zebra-web-print
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "${WEB_PORT:-8000}:8000"
+    environment:
+      DJANGO_SECRET_KEY: "${DJANGO_SECRET_KEY:-django-insecure-change-me-before-real-use}"
+      DJANGO_DEBUG: "${DJANGO_DEBUG:-false}"
+      DJANGO_ALLOWED_HOSTS: "${DJANGO_ALLOWED_HOSTS:-*}"
+      DATABASE_ENGINE: "${DATABASE_ENGINE:-postgres}"
+      SQLITE_PATH: "${SQLITE_PATH:-/app/data/db.sqlite3}"
+      POSTGRES_DB: "${POSTGRES_DB:-zebra_web_print}"
+      POSTGRES_USER: "${POSTGRES_USER:-zebra_web_print}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:-change-me}"
+      POSTGRES_HOST: "${POSTGRES_HOST:-db}"
+      POSTGRES_PORT: "${POSTGRES_PORT:-5432}"
+      POSTGRES_CONN_MAX_AGE: "${POSTGRES_CONN_MAX_AGE:-60}"
+    volumes:
+      - ./data:/app/data
+
+volumes:
+  postgres_data:

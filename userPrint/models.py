@@ -37,6 +37,14 @@ class PrintJob(models.Model):
         return f'Print job {self.id} ({self.status})'
 
 
+class LPNSuffix(models.Model):
+    suffix = models.CharField(max_length=6, unique=True, db_index=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.suffix
+
+
 """This class is used to define the LPN model."""
 class LPN(models.Model):
     full_lpn = models.CharField(max_length=15, unique=True, db_index=True)

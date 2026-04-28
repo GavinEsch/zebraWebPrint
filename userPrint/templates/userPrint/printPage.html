@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
     {% load static %}
+    <script>
+        document.documentElement.setAttribute('data-theme', localStorage.getItem('zebraWebPrintTheme') || 'dark');
+    </script>
+    <link rel="stylesheet" href="{% static 'userPrint/app.css' %}">
+    <script type="text/javascript" src="{% static 'userPrint/theme.js' %}" defer></script>
     <script type="text/javascript" src="{% static 'userPrint/BrowserPrint-3.1.250.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'userPrint/BrowserPrint-Zebra-1.1.250.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'userPrint/GRLBrowserPrint.js' %}"></script>
@@ -16,6 +21,7 @@
             <li><strong>LPNsFE</strong></li>
         </ul>
         <ul>
+            <li><button id="theme_toggle" class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch theme"></button></li>
             <li><a href="adminPrint" role="button">Admin</a></li>
         </ul>
     </nav>
@@ -40,10 +46,8 @@
                                 <option value="1000">1000</option>
                             </select>
                             <select id="selected_device" onchange="onDeviceSelected(this);" required></select>
-                            <br/><br/>
                             <input id="print_button" type="button" value="Print" onclick="getLPNs()">
-                            <input id="stop_printer_button" type="button" value="Stop Printer" onclick="stopSelectedPrinter()">
-                            <br/><br/>
+                            <button id="stop_printer_button" class="stop-printer-button" type="button" onclick="stopSelectedPrinter()">Stop Printer</button>
                         </fieldset>
                     </form>
                 </article>
@@ -54,5 +58,11 @@
             </section>
         </div>
     </main>
+    <footer class="site-footer">
+        <div class="container-fluid">
+            <p class="footer-credit">Built by Megamind</p>
+            <p class="footer-remark">Please don't break this</p>
+        </div>
+    </footer>
 </body>
 </html>
