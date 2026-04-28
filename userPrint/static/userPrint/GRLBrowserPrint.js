@@ -4,98 +4,265 @@
 //Select the printer
 var selected_device;
         var devices = [];
+        var isPrinting = false;
+        var activePrintJobId = null;
+        var activeSentCount = 0;
+        var cancelPrintRequested = false;
+        var PRINT_CHUNK_SIZE = 5;
+
+        function setPrintStatus(message, details) {
+            var printStatus = document.getElementById("print_status");
+            if(printStatus) {
+                printStatus.innerHTML = "";
+
+                var title = document.createElement("strong");
+                title.textContent = message;
+                printStatus.appendChild(title);
+
+                if(details) {
+                    var detailList = Array.isArray(details) ? details : [details];
+                    detailList.forEach(function(detail) {
+                        if(detail) {
+                            printStatus.appendChild(document.createElement("br"));
+                            printStatus.appendChild(document.createTextNode(detail));
+                        }
+                    });
+                }
+            }
+        }
+
+        function selectedPrinterName() {
+            return selected_device ? (selected_device.name || selected_device.uid || "Selected printer") : "No printer selected";
+        }
+
+        function labelCountFromZpl(dataToWrite) {
+            var matches = dataToWrite.match(/\^XA/g);
+            return matches ? matches.length : 0;
+        }
+
+        function delay(milliseconds) {
+            return new Promise((resolve) => setTimeout(resolve, milliseconds));
+        }
+
+        function getClientContext() {
+            return {
+                platform: navigator.platform || '',
+                language: navigator.language || '',
+                vendor: navigator.vendor || ''
+            };
+        }
+
+        function setNoPrinterStatus() {
+            setPrintStatus("No printer selected", [
+                "Choose a Zebra printer from the list.",
+                "If the list is empty, check Zebra Browser Print and the printer connection."
+            ]);
+        }
+
+        function addDeviceOption(device) {
+            if(!device) {
+                return;
+            }
+
+            var html_select = document.getElementById("selected_device");
+            if(!html_select) {
+                return;
+            }
+
+            var option = document.createElement("option");
+            option.text = device.name || device.uid || "Unnamed printer";
+            option.value = device.uid || "";
+            html_select.add(option);
+        }
+
+        function loadLocalPrinters() {
+            setPrintStatus("Searching for Zebra printers...", "Checking printers available through Zebra Browser Print.");
+
+            BrowserPrint.getLocalDevices(function(device_list){
+                var foundPrinters = false;
+
+                for(var i = 0; i < device_list.length; i++)
+                {
+                    var device = device_list[i];
+
+                    if(!selected_device || device.uid != selected_device.uid)
+                    {
+                        devices.push(device);
+                        addDeviceOption(device);
+                    }
+
+                    if(!selected_device) {
+                        selected_device = device;
+                    }
+
+                    foundPrinters = true;
+                }
+
+                if(foundPrinters) {
+                    setPrintStatus("Ready to print", [
+                        "Printer: " + selectedPrinterName(),
+                        "Found " + device_list.length + " printer(s)."
+                    ]);
+                } else {
+                    setPrintStatus("No Zebra printers found", [
+                        "Check that Zebra Browser Print is running.",
+                        "Confirm the printer is installed and connected."
+                    ]);
+                }
+            }, function(error){
+                var message = error || "Unable to get local printers. Check that Zebra Browser Print is installed and running.";
+                setPrintStatus("Unable to load printers", message);
+                alert(message);
+            },"printer");
+        }
+
         function setup()
         {
+            setPrintStatus("Connecting to Zebra Browser Print...", "Looking for the default Zebra printer.");
+
             BrowserPrint.getDefaultDevice("printer", function(device)
                     {
 
                         selected_device = device;
-                        devices.push(device);
-                        var html_select = document.getElementById("selected_device");
-                        var option = document.createElement("option");
-                        option.text = device.name;
-                        html_select.add(option);
+                        if(device) {
+                            devices.push(device);
+                            addDeviceOption(device);
+                        }
                         
                         //get the list of devices
-                        BrowserPrint.getLocalDevices(function(device_list){
-                            for(var i = 0; i < device_list.length; i++)
-                            {
-                                var device = device_list[i];
-
-                                //add the device to the list of devices if it is not the selected device
-                                if(!selected_device || device.uid != selected_device.uid)
-                                {
-                                    devices.push(device);
-                                    var option = document.createElement("option");
-                                    option.text = device.name;
-                                    option.value = device.uid;
-                                    html_select.add(option);
-                                }
-                            }
-                            
-                        }, function(){alert("Error getting local devices")},"printer");
+                        loadLocalPrinters();
                         
                     }, function(error){
-                        alert(error);
+                        var message = error || "No default Zebra printer found. Check that Zebra Browser Print is installed and running.";
+                        setPrintStatus("No default printer found", [
+                            "Looking for other installed Zebra printers.",
+                            message
+                        ]);
+                        loadLocalPrinters();
                     })
         }
 
-        /*
-        * Get the application configuration from the client machine
-        */
-        function getConfig(){
-            BrowserPrint.getApplicationConfiguration(function(config){
-                alert(JSON.stringify(config))
-            }, function(error){
-                alert(JSON.stringify(new BrowserPrint.ApplicationConfiguration()));
-            })
+        function getCsrfToken() {
+            var tokenInput = document.querySelector('[name=csrfmiddlewaretoken]');
+            return tokenInput ? tokenInput.value : '';
+        }
+
+        function setPrintControlsDisabled(isDisabled) {
+            var buttonIds = ['print_button', 'custom_print_button'];
+            buttonIds.forEach(function(buttonId) {
+                var button = document.getElementById(buttonId);
+                if(button) {
+                    button.disabled = isDisabled;
+                }
+            });
+        }
+
+        function setStopButtonDisabled(isDisabled) {
+            var button = document.getElementById("stop_printer_button");
+            if(button) {
+                button.disabled = isDisabled;
+            }
+        }
+
+        function stopSelectedPrinter() {
+            if(!selected_device) {
+                setNoPrinterStatus();
+                alert("No printer selected");
+                return;
+            }
+
+            var confirmed = confirm("Stop the selected printer and clear its queued Zebra labels?");
+            if(!confirmed) {
+                return;
+            }
+
+            cancelPrintRequested = true;
+            setStopButtonDisabled(true);
+            setPrintStatus("Stopping printer...", [
+                "Printer: " + selectedPrinterName(),
+                "The app will stop sending more labels.",
+                "The printer should stop after the current label or buffered labels finish."
+            ]);
+
+            return new Promise((resolve, reject) => {
+                selected_device.send("~JA", function(){
+                    updatePrintJobStatus(activePrintJobId, 'canceled', 'Canceled by user from browser', activeSentCount).finally(function(){
+                        activePrintJobId = null;
+                        activeSentCount = 0;
+                        isPrinting = false;
+                        setPrintControlsDisabled(false);
+                        setStopButtonDisabled(false);
+                        setPrintStatus("Stop command sent", [
+                            "Printer: " + selectedPrinterName(),
+                            "Queued labels were canceled if they were still in the printer buffer."
+                        ]);
+                        resolve();
+                    });
+                }, function(errorMessage){
+                    var message = errorMessage || "Unable to send stop command";
+                    setStopButtonDisabled(false);
+                    setPrintStatus("Unable to stop printer", [
+                        "Printer: " + selectedPrinterName(),
+                        message
+                    ]);
+                    alert(message);
+                    reject(new Error(message));
+                });
+            });
         }
 
         /*
-        * Generate a random string of 11 characters to be used as the LPN
-        @returns {string} - The generated LPN
+        * Reserve a batch of unique LPNs on the server in one request.
+        @param {number} count - The number of LPNs to reserve
+        @returns {Promise} - The promise that resolves to the reserved LPNs
         */
-        function generateRandomString() {
-            let result = '';
-            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-            const charactersLength = characters.length;
+        function reserveLPNsFromServer(count) {
+            const csrftoken = getCsrfToken();
 
-            //generate a random string of 11 characters
-            for (let i = 0; i < 11; i++) {
-              const randomIndex = Math.floor(Math.random() * charactersLength);
-              result += characters.charAt(randomIndex);
-            }
-            return result;
-          }
-
-          /*
-            * Send the generated LPN to the server
-          @param {string} fullLPN - The full LPN to be sent to the server
-          @returns {Promise} - The promise that resolves to the response from the server
-          */
-          function sendLPNToServer(fullLPN) {
-            const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
-            
-            //send the LPN to the server
-            return fetch('/api/add_lpn/', {
+            return fetch('/api/reserve_lpns/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                     'X-CSRFToken': csrftoken,
                 },
-                body: JSON.stringify({ full_lpn: fullLPN })
+                body: JSON.stringify({
+                    count: count,
+                    printer_name: selected_device ? selected_device.name : '',
+                    client_context: getClientContext()
+                })
             })
-
-            //return the response from the server
-            .then(response => {
+            .then(response => response.json().then(data => {
                 if (!response.ok) {
-                    throw new Error('Network response was not ok');
+                    throw new Error(data.message || 'Unable to reserve LPNs');
                 }
-                return response.json();
-            })
+                return data;
+            }))
             .catch(error => {
                 console.error('Error:', error);
-                return { status: 'error', message: 'Network error or server not responding' };
+                return { status: 'error', message: error.message || 'Network error or server not responding' };
+            });
+        }
+
+        function updatePrintJobStatus(jobId, status, message, sentCount) {
+            if(!jobId) {
+                return Promise.resolve();
+            }
+
+            return fetch('/api/print_jobs/' + jobId + '/status/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCsrfToken(),
+                },
+                body: JSON.stringify({
+                    status: status,
+                    message: message || '',
+                    printer_name: selected_device ? selected_device.name : '',
+                    sent_count: sentCount || 0,
+                    client_context: getClientContext()
+                })
+            }).catch(error => {
+                console.error('Error updating print job status:', error);
             });
         }
 
@@ -113,7 +280,7 @@ var selected_device;
             var template = '^XA^CF0,40^FO40,30^BY2^BCN,100,N,N,N^FD$FullLPN$^FS^CF0,30^FO50,140^FDLPN $FirstSeven$^FS^CF0,60^FO250,140^FD$LastFour$^FS^XZ';
 
             //replace the placeholders in the template with the LPN
-            dataToWrite = template.replace('$FullLPN$', FullLPN).replace('$FirstSeven$', FirstSeven).replace('$LastFour$', LastFour);
+            var dataToWrite = template.replace('$FullLPN$', FullLPN).replace('$FirstSeven$', FirstSeven).replace('$LastFour$', LastFour);
             return dataToWrite;
         }
 
@@ -122,9 +289,25 @@ var selected_device;
         @returns {Promise} - The promise that resolves to true if the printer is ready to print
         */
         async function printCustomLPN(){
+            if(isPrinting) {
+                return;
+            }
+
+            if(!selected_device) {
+                setNoPrinterStatus();
+                alert("No printer selected");
+                return;
+            }
+
+            isPrinting = true;
+            cancelPrintRequested = false;
+            setPrintControlsDisabled(true);
+
+            try {
 
             //check if the printer is ready, if not it will skip the rest of the function
             var zebraPrinter = new Zebra.Printer(selected_device);
+            setPrintStatus("Checking printer...", "Printer: " + selectedPrinterName());
             var tf = await getStatus(zebraPrinter);
             console.log("tf: " + tf);
             if(!tf)  {
@@ -133,17 +316,36 @@ var selected_device;
             
             console.log("Selected Device: "+ selected_device.name);
             console.log("Custom LPN: "  + document.getElementById("customLPN").value);
-            fullLPN = document.getElementById("customLPN").value.toUpperCase();
+            var fullLPN = document.getElementById("customLPN").value.toUpperCase();
 
             //check if the LPN is the correct length if not alert the user
             if(fullLPN.length != 14){
+                setPrintStatus("Invalid custom LPN", [
+                    "LPN must be exactly 14 characters.",
+                    "Entered: " + fullLPN.length + " characters."
+                ]);
                 alert("Invalid LPN");
                 return;
             } else {
 
                 //gets the ZPL code for the LPN and sends it to the printer
-                dataToWrite = LPNTemplate(fullLPN);
-                writeToSelectedPrinter(dataToWrite);
+                var dataToWrite = LPNTemplate(fullLPN);
+                setPrintStatus("Preparing custom label...", [
+                    "LPN: " + fullLPN,
+                    "Printer: " + selectedPrinterName()
+                ]);
+            await writeToSelectedPrinter(dataToWrite);
+            }
+            } catch(error) {
+                if(error.message === "Print canceled by user") {
+                    setPrintStatus("Print canceled", "The app stopped sending labels to the printer.");
+                } else {
+                    setPrintStatus("Print failed", error.message || "Unknown print error.");
+                    alert(error.message || 'Print failed');
+                }
+            } finally {
+                isPrinting = false;
+                setPrintControlsDisabled(false);
             }
         }
 
@@ -158,23 +360,38 @@ var selected_device;
                 zebraPrinter.getStatus(function(status){
                     var statusMessage = status.getMessage();
                     console.log(statusMessage);
-                    document.getElementById("print_status").innerText = statusMessage;
 
                     //check the status of the printer and alert the user if the printer is not ready
                     switch(statusMessage) {
                         case "Head Open":
+                            setPrintStatus("Printer needs attention", [
+                                "Printer: " + selectedPrinterName(),
+                                "Close the printer head, then try again."
+                            ]);
                             alert("Please Close Printer Head");
                             resolve(false);
                             break;
                         case "Paper Out":
+                            setPrintStatus("Printer needs media", [
+                                "Printer: " + selectedPrinterName(),
+                                "Load labels or check the media path, then try again."
+                            ]);
                             alert("Please Check Paper");
                             resolve(false);
                             break;
                         case "Paused":
+                            setPrintStatus("Printer is paused", [
+                                "Printer: " + selectedPrinterName(),
+                                "Resume the printer, then try again."
+                            ]);
                             alert("Printer Paused. Please Resume");
                             resolve(false);
                             break;
                         default:
+                            setPrintStatus("Printer ready", [
+                                "Printer: " + selectedPrinterName(),
+                                "Status: " + statusMessage
+                            ]);
                             resolve(true);
                             break;
                     }
@@ -189,10 +406,35 @@ var selected_device;
         @returns {Promise} - The promise that resolves to the LPNs generated
         */
         async function getLPNs(){
-            
+            if(isPrinting) {
+                return;
+            }
+
+            if(!selected_device) {
+                setNoPrinterStatus();
+                alert("No printer selected");
+                return;
+            }
+
+            isPrinting = true;
+            cancelPrintRequested = false;
+            setPrintControlsDisabled(true);
+
+            try {
             //check if the printer is ready, if not it will skip the rest of the function
             var zebraPrinter = new Zebra.Printer(selected_device);
-            var tf = await getStatus(zebraPrinter);
+            var tf;
+            try {
+                setPrintStatus("Checking printer...", "Printer: " + selectedPrinterName());
+                tf = await getStatus(zebraPrinter);
+            } catch(error) {
+                setPrintStatus("Unable to read printer status", [
+                    "Printer: " + selectedPrinterName(),
+                    error.message || "Check Zebra Browser Print and the printer connection."
+                ]);
+                alert("Unable to read printer status");
+                return;
+            }
             console.log("tf: " + tf);
             if(!tf)  {
                 return;
@@ -206,33 +448,40 @@ var selected_device;
             console.log("Number of LPNs: " + numberOfLPNs);
 
             let LPNs = [];
-            let dataToWrite = '';
-
-            document.getElementById("print_status").innerText = 'Getting LPNs...';
+            setPrintStatus("Reserving labels...", [
+                "Count: " + numberOfLPNs,
+                "Printer: " + selectedPrinterName()
+            ]);
             
-            //generate the LPNs and send them to the server to be checked if they already exist
-            for(let x = 0; x < numberOfLPNs; x++) {
-                let tempLPN = 'LPN' + generateRandomString();
-                let response = await sendLPNToServer(tempLPN);
-                
-                //if the LPN is not already in the database, add it to the list of LPNs to be printed
-                if (response.status === 'success') {
-                    LPNs.push(tempLPN);
-                    document.getElementById("print_status").innerText = 'LPNs Generated';
-                    console.log("Server Response: " + response.status + " " + response.lpn);
-                    console.log("LPN added: ", tempLPN);
-                } else {
-                    console.log("LPN already exists or error: ", tempLPN);
-                }
+            let response = await reserveLPNsFromServer(numberOfLPNs);
+            if (response.status !== 'success') {
+                setPrintStatus("Unable to reserve labels", response.message);
+                alert(response.message);
+                return;
             }
-            
-            //write the LPNs into a continual line of ZPL code for printer to print fluidly
-            LPNs.forEach(FullLPN => {
-                dataToWrite = dataToWrite + LPNTemplate(FullLPN)
-            });
-            
-            //write to printer
-            writeToSelectedPrinter(dataToWrite);
+
+            LPNs = response.lpns;
+            activePrintJobId = response.job_id;
+            setPrintStatus("Labels reserved", [
+                "Job: " + response.job_id,
+                "Count: " + LPNs.length
+            ]);
+
+            await writeLabelsToSelectedPrinter(LPNs, response.job_id);
+            } catch(error) {
+                if(error.message === "Print canceled by user") {
+                    setPrintStatus("Print canceled", [
+                        "Printer: " + selectedPrinterName(),
+                        "The app stopped sending the remaining labels."
+                    ]);
+                } else {
+                    setPrintStatus("Print failed", error.message || "Unknown print error.");
+                    alert(error.message || 'Print failed');
+                }
+            } finally {
+                isPrinting = false;
+                setPrintControlsDisabled(false);
+            }
 
         }
 
@@ -240,7 +489,100 @@ var selected_device;
         * Writes the data to the selected printer
         @param {string} dataToWrite - The data to be written to the printer
         */
-        function writeToSelectedPrinter(dataToWrite) {
+        function buildLabelBatchZpl(lpns, isFinalBatch) {
+            var dataToWrite = '';
+
+            lpns.forEach(function(FullLPN) {
+                dataToWrite = dataToWrite + LPNTemplate(FullLPN);
+            });
+
+            let firstIndex = dataToWrite.indexOf("^XA^CF0,40^");
+            let lastIndex = dataToWrite.lastIndexOf("^XA^CF0,40^");
+
+            if (firstIndex === -1) {
+                return dataToWrite;
+            }
+
+            if (firstIndex === lastIndex) {
+                let insertAfter = firstIndex + 3;
+                dataToWrite = dataToWrite.substring(0, insertAfter) + (isFinalBatch ? "^MMc" : "^MMt") + dataToWrite.substring(insertAfter);
+            } else {
+                let insertAfterFirst = firstIndex + 3;
+                dataToWrite = dataToWrite.substring(0, insertAfterFirst) + "^MMt" + dataToWrite.substring(insertAfterFirst);
+
+                if(isFinalBatch) {
+                    lastIndex = dataToWrite.lastIndexOf("^XA^CF0,40^");
+
+                    let insertAfterLast = lastIndex + 3; 
+                    dataToWrite = dataToWrite.substring(0, insertAfterLast) + "^MMc" + dataToWrite.substring(insertAfterLast);
+                }
+            }
+
+            return dataToWrite;
+        }
+
+        function sendRawToSelectedPrinter(dataToWrite) {
+            return new Promise((resolve, reject) => {
+                selected_device.send(dataToWrite, function(){
+                    resolve();
+                }, function(errorMessage){
+                    reject(new Error(errorMessage || 'Printer send failed'));
+                });
+            });
+        }
+
+        async function writeLabelsToSelectedPrinter(lpns, printJobId) {
+            activePrintJobId = printJobId || null;
+            activeSentCount = 0;
+
+            var totalLabels = lpns.length;
+            var sentLabels = 0;
+
+            for(var start = 0; start < totalLabels; start += PRINT_CHUNK_SIZE) {
+                if(cancelPrintRequested) {
+                    await updatePrintJobStatus(printJobId, 'canceled', 'Canceled by user from browser', sentLabels);
+                    throw new Error("Print canceled by user");
+                }
+
+                var end = Math.min(start + PRINT_CHUNK_SIZE, totalLabels);
+                var chunk = lpns.slice(start, end);
+                var isFinalBatch = end >= totalLabels;
+                var dataToWrite = buildLabelBatchZpl(chunk, isFinalBatch);
+
+                setPrintStatus("Sending labels...", [
+                    "Printer: " + selectedPrinterName(),
+                    "Job: " + printJobId,
+                    "Sending " + (start + 1) + "-" + end + " of " + totalLabels,
+                    "Stop Printer will cancel labels that have not been sent yet."
+                ]);
+
+                try {
+                    await sendRawToSelectedPrinter(dataToWrite);
+                } catch(error) {
+                    await updatePrintJobStatus(printJobId, 'failed', error.message || 'Printer send failed', sentLabels);
+                    throw error;
+                }
+
+                sentLabels = end;
+                activeSentCount = sentLabels;
+                await delay(100);
+            }
+
+            await updatePrintJobStatus(printJobId, 'sent', '', sentLabels);
+            activePrintJobId = null;
+            activeSentCount = 0;
+            cancelPrintRequested = false;
+            setPrintStatus("Print job sent", [
+                "Printer: " + selectedPrinterName(),
+                "Labels: " + sentLabels,
+                "Job: " + printJobId
+            ]);
+        }
+
+        function writeToSelectedPrinter(dataToWrite, printJobId) {
+            activePrintJobId = printJobId || null;
+            activeSentCount = 0;
+
             let firstIndex = dataToWrite.indexOf("^XA^CF0,40^");
             let lastIndex = dataToWrite.lastIndexOf("^XA^CF0,40^");
 
@@ -256,47 +598,40 @@ var selected_device;
                 let insertAfterLast = lastIndex + 3; 
                 dataToWrite = dataToWrite.substring(0, insertAfterLast) + "^MMc" + dataToWrite.substring(insertAfterLast);
             }
-            selected_device.send(dataToWrite, undefined, function(errorMessage){});
+            setPrintStatus("Sending to printer...", [
+                "Printer: " + selectedPrinterName(),
+                "Labels: " + labelCountFromZpl(dataToWrite),
+                printJobId ? "Job: " + printJobId : "Custom print"
+            ]);
+
+            return new Promise((resolve, reject) => {
+                selected_device.send(dataToWrite, function(){
+                    var sentCount = labelCountFromZpl(dataToWrite);
+                    updatePrintJobStatus(printJobId, 'sent', '', sentCount).finally(function(){
+                        activePrintJobId = null;
+                        activeSentCount = 0;
+                        setPrintStatus("Print job sent", [
+                            "Printer: " + selectedPrinterName(),
+                            "Labels: " + sentCount,
+                            printJobId ? "Job: " + printJobId : "Custom print"
+                        ]);
+                        resolve();
+                    });
+                }, function(errorMessage){
+                    var message = errorMessage || 'Printer send failed';
+                    updatePrintJobStatus(printJobId, 'failed', message, activeSentCount).finally(function(){
+                        activePrintJobId = null;
+                        activeSentCount = 0;
+                        setPrintStatus("Printer send failed", [
+                            "Printer: " + selectedPrinterName(),
+                            message
+                        ]);
+                        reject(new Error(message));
+                    });
+                });
+            });
         }
 
-        /*
-        * Reads the data from the selected printer
-        */
-        var readCallback = function(readData) {
-            if(readData === undefined || readData === null || readData === "")
-            {
-                alert("No Response from Device");
-            }
-            else
-            {
-                alert(readData);
-            }
-            
-        }
-
-        var errorCallback = function(errorMessage){
-            alert("Error: " + errorMessage);	
-        }
-
-        /*
-        * Reads the data from the selected printer
-        */
-        function readFromSelectedPrinter()
-        {
-        
-            selected_device.read(readCallback, errorCallback);
-            
-        }
-
-        /*
-        * Gets the device list in an alert format
-        @param {array} deviceList - The list of devices
-        */
-        function getDeviceCallback(deviceList)
-        {
-            alert("Devices: \n" + JSON.stringify(deviceList, null, 4))
-        }
-        
         /*
         * Gets the device list
         @param {array} deviceList - The list of devices
@@ -308,6 +643,7 @@ var selected_device;
                 if(selected.value == devices[i].uid)
                 {
                     selected_device = devices[i];
+                    setPrintStatus("Printer selected", "Printer: " + selectedPrinterName());
                     return;
                 }
             }
@@ -315,7 +651,10 @@ var selected_device;
             zebraPrinter.getStatus(function(status){
                 var statusMessage = status.getMessage();
                 console.log(statusMessage);
-                document.getElementById("print_status").innerText = statusMessage;
+                setPrintStatus("Printer status", [
+                    "Printer: " + selectedPrinterName(),
+                    "Status: " + statusMessage
+                ]);
             }, function(error){});
         }
         window.onload = setup;

@@ -36,28 +36,13 @@
                             <input type="text" id="customLPN" name="customLPN" placeholder="Enter LPN" required>
                             <select id="selected_device" onchange="onDeviceSelected(this);" required></select>
                             <br/><br/>
-                            <input type="button" value="Print" onclick="printCustomLPN()">
+                            <input id="custom_print_button" type="button" value="Print" onclick="printCustomLPN()">
+                            <input id="stop_printer_button" type="button" value="Stop Printer" onclick="stopSelectedPrinter()">
                             <br/><br/>
                         </fieldset>
                     </form>
                 </details>
             </article>
-            <!--
-            <article>
-                <details>
-                    <summary>Any Number of LPNs</summary>
-                    <form>
-                        <fieldset role="group">
-                            <input type="number" id="quantity" name="quantity" min="1" step="1" placeholder="Enter Quantity" required>
-                            <select id="selected_device" onchange=onDeviceSelected(this); required></select><br/><br/>
-                            <button type="submit">Print</button>
-                        </fieldset>
-                    </form>
-                </details>
-            </article>
-            -->
-            
-            
             <div>
                 <h3>Status:</h3>
                 <p id="print_status" >Waiting for input...</p>

@@ -16,7 +16,7 @@
             <li><strong>LPNsFE</strong></li>
         </ul>
         <ul>
-            <li><a href="adminPrint" onclick="getPrinters()" role="button">Admin</a></li>
+            <li><a href="adminPrint" role="button">Admin</a></li>
         </ul>
     </nav>
     <main class="container">
@@ -41,7 +41,8 @@
                             </select>
                             <select id="selected_device" onchange="onDeviceSelected(this);" required></select>
                             <br/><br/>
-                            <input type="button" value="Print" onclick="getLPNs()">
+                            <input id="print_button" type="button" value="Print" onclick="getLPNs()">
+                            <input id="stop_printer_button" type="button" value="Stop Printer" onclick="stopSelectedPrinter()">
                             <br/><br/>
                         </fieldset>
                     </form>
@@ -54,3 +55,4 @@
         </div>
     </main>
 </body>
+</html>
