@@ -8,3 +8,5 @@ db.sqlite3
 data/
 logs/
 staticfiles/
+logs/apache.custom.log
+logs/apache.error.log

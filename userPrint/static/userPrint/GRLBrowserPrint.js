@@ -505,16 +505,16 @@ var selected_device;
 
             if (firstIndex === lastIndex) {
                 let insertAfter = firstIndex + 3;
-                dataToWrite = dataToWrite.substring(0, insertAfter) + (isFinalBatch ? "^MMc" : "^MMt") + dataToWrite.substring(insertAfter);
+                dataToWrite = dataToWrite.substring(0, insertAfter) + (isFinalBatch ? "^MMC" : "^MMT") + dataToWrite.substring(insertAfter);
             } else {
                 let insertAfterFirst = firstIndex + 3;
-                dataToWrite = dataToWrite.substring(0, insertAfterFirst) + "^MMt" + dataToWrite.substring(insertAfterFirst);
+                dataToWrite = dataToWrite.substring(0, insertAfterFirst) + "^MMT" + dataToWrite.substring(insertAfterFirst);
 
                 if(isFinalBatch) {
                     lastIndex = dataToWrite.lastIndexOf("^XA^CF0,40^");
 
                     let insertAfterLast = lastIndex + 3; 
-                    dataToWrite = dataToWrite.substring(0, insertAfterLast) + "^MMc" + dataToWrite.substring(insertAfterLast);
+                    dataToWrite = dataToWrite.substring(0, insertAfterLast) + "^MMC" + dataToWrite.substring(insertAfterLast);
                 }
             }
 
@@ -588,15 +588,15 @@ var selected_device;
 
             if (firstIndex !== -1 && firstIndex === lastIndex) {
                 let insertAfter = firstIndex + 3;
-                dataToWrite = dataToWrite.substring(0, insertAfter) + "^MMc" + dataToWrite.substring(insertAfter);
+                dataToWrite = dataToWrite.substring(0, insertAfter) + "^MMC" + dataToWrite.substring(insertAfter);
             } else if (firstIndex !== -1) {
                 let insertAfterFirst = firstIndex + 3;
-                dataToWrite = dataToWrite.substring(0, insertAfterFirst) + "^MMt" + dataToWrite.substring(insertAfterFirst);
+                dataToWrite = dataToWrite.substring(0, insertAfterFirst) + "^MMT" + dataToWrite.substring(insertAfterFirst);
 
                 lastIndex = dataToWrite.lastIndexOf("^XA^CF0,40^");
 
                 let insertAfterLast = lastIndex + 3; 
-                dataToWrite = dataToWrite.substring(0, insertAfterLast) + "^MMc" + dataToWrite.substring(insertAfterLast);
+                dataToWrite = dataToWrite.substring(0, insertAfterLast) + "^MMC" + dataToWrite.substring(insertAfterLast);
             }
             setPrintStatus("Sending to printer...", [
                 "Printer: " + selectedPrinterName(),
