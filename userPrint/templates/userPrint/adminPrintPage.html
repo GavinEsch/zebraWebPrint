@@ -11,6 +11,7 @@
     </script>
     <link rel="stylesheet" href="{% static 'userPrint/app.css' %}">
     <script type="text/javascript" src="{% static 'userPrint/theme.js' %}" defer></script>
+    <script type="text/javascript" src="{% static 'userPrint/xlsx.full.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'userPrint/BrowserPrint-3.1.250.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'userPrint/BrowserPrint-Zebra-1.1.250.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'userPrint/GRLBrowserPrint.js' %}"></script>
@@ -30,20 +31,42 @@
     <div class="grid">
         <section>
             <hgroup>
-                <h2>Advanced LPN Printing</h2>
+                <h2>Advanced Label Printing</h2>
                 <h3>Admin Controls</h3>
             </hgroup>
             <article>
                 <details open>
-                    <summary>Custom LPNs</summary>
-                    <p>Print a single barcode label for a specific LPN.</p>
+                    <summary>Custom Label</summary>
+                    <p>Print a single barcode label for a specific value.</p>
                     <form id="lpnForm" onsubmit="printCustomLPN(); return false;">
                         <fieldset role="group">
-                            <input type="text" id="customLPN" name="customLPN" placeholder="Enter LPN" required>
+                            <input type="text" id="customLPN" name="customLPN" placeholder="Enter label value" required>
                             <select id="selected_device" onchange="onDeviceSelected(this);" required></select>
                             <input id="custom_print_button" type="button" value="Print" onclick="printCustomLPN()">
                             <button id="stop_printer_button" class="stop-printer-button" type="button" onclick="stopSelectedPrinter()">Stop Printer</button>
                         </fieldset>
+                    </form>
+                </details>
+            </article>
+            <article>
+                <details>
+                    <summary>File Import</summary>
+                    <p>Upload a CSV or XLSX file with one label value per row. Use an optional copies column to print more than one of a value.</p>
+                    <div class="import-template-actions">
+                        <button type="button" class="secondary" onclick="downloadImportCsvTemplate()">CSV Template</button>
+                        <button type="button" class="secondary" onclick="downloadImportXlsxTemplate()">XLSX Template</button>
+                    </div>
+                    <form id="importForm" onsubmit="printImportedLPNs(); return false;">
+                        <fieldset role="group">
+                            <input type="file" id="lpn_import_file" name="lpn_import_file" accept=".csv,.xlsx,.xls,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" required>
+                            <input id="import_print_button" type="button" value="Print File" onclick="printImportedLPNs()">
+                        </fieldset>
+                        <label class="inline-option" for="last_six_bolded">
+                            <input type="checkbox" id="last_six_bolded" name="last_six_bolded">
+                            Last six bolded
+                        </label>
+                        <p id="import_file_summary" class="import-file-summary">No file selected.</p>
+                        <div id="import_preview" class="import-preview" hidden></div>
                     </form>
                 </details>
             </article>
