@@ -23,8 +23,9 @@
     </ul>
     <ul>
         <li><button id="theme_toggle" class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Switch theme"></button></li>
-        <li><a href="../" role="button">User Mode</a></li>
-        <li><a href="../admin" role="button">Django Admin</a></li>
+        <li><a href="{% url 'print' %}" role="button">User Mode</a></li>
+        <li><a href="{% url 'printerManagement' %}" role="button">Printers</a></li>
+        <li><a href="/admin/" role="button">Django Admin</a></li>
     </ul>
 </nav>
 <main class="container">
@@ -39,6 +40,7 @@
                     <summary>Custom Label</summary>
                     <p>Print a single barcode label for a specific value.</p>
                     <form id="lpnForm" onsubmit="printCustomLPN(); return false;">
+                        {% csrf_token %}
                         <fieldset role="group">
                             <input type="text" id="customLPN" name="customLPN" placeholder="Enter label value" required>
                             <select id="selected_device" onchange="onDeviceSelected(this);" required></select>
@@ -59,7 +61,9 @@
                     <form id="importForm" onsubmit="printImportedLPNs(); return false;">
                         <fieldset role="group">
                             <input type="file" id="lpn_import_file" name="lpn_import_file" accept=".csv,.xlsx,.xls,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" required>
+                            <select id="import_selected_device" onchange="onImportDeviceSelected(this);" required></select>
                             <input id="import_print_button" type="button" value="Print File" onclick="printImportedLPNs()">
+                            <button id="import_stop_printer_button" class="stop-printer-button" type="button" onclick="stopSelectedPrinter()">Stop Printer</button>
                         </fieldset>
                         <label class="inline-option" for="last_six_bolded">
                             <input type="checkbox" id="last_six_bolded" name="last_six_bolded">

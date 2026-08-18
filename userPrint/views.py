@@ -1,6 +1,7 @@
 import json
 import secrets
 import string
+from ipaddress import ip_address
 
 from django.db import IntegrityError, transaction
 from django.http import JsonResponse
@@ -9,7 +10,7 @@ from django.shortcuts import render
 from django.utils import timezone
 from django.views.decorators.http import require_GET, require_POST
 
-from .models import LPN, LPNSuffix, PrintJob
+from .models import LPN, LPNSuffix, PrinterFilter, PrintJob
 
 LPN_PREFIX = 'LPN'
 LPN_RANDOM_LENGTH = 11
@@ -24,6 +25,10 @@ def print(request):
 """This function is used to display the admin print page. It is called when the user clicks the 'Admin Print' button on the print page."""
 def adminPrint(request):
     return render(request, 'userPrint/adminPrintPage.html')
+
+
+def printerManagement(request):
+    return render(request, 'userPrint/printerManagementPage.html')
 
 
 @require_POST
@@ -119,10 +124,122 @@ def update_print_job_status(request, job_id):
     return JsonResponse(serialize_print_job(print_job))
 
 
+@require_GET
+def printer_filter(request):
+    return allowed_printers(request)
+
+
+@require_POST
+def update_printer_filter(request):
+    return save_allowed_printer(request)
+
+
+@require_GET
+def allowed_printers(request):
+    printers = PrinterFilter.objects.exclude(
+        allowed_ip='',
+        display_name='',
+    ).order_by('display_name', 'allowed_ip', 'id')
+    serialized = [serialize_printer_filter(printer) for printer in printers]
+    return JsonResponse({
+        'status': 'success',
+        'printers': serialized,
+        'enabled_count': sum(1 for printer in serialized if printer['enabled']),
+    })
+
+
+@require_POST
+def save_allowed_printer(request):
+    try:
+        data = json.loads(request.body)
+    except json.JSONDecodeError:
+        return JsonResponse({'status': 'error', 'message': 'Invalid JSON'}, status=400)
+
+    allowed_ip = normalize_printer_ip(data.get('allowed_ip') or data.get('ip'))
+    display_name = normalize_printer_name(data.get('display_name') or data.get('name'))
+    is_enabled = normalize_bool(data.get('is_enabled'), default=True)
+
+    if not allowed_ip:
+        return JsonResponse({'status': 'error', 'message': 'Printer IP is required'}, status=400)
+    if not display_name:
+        return JsonResponse({'status': 'error', 'message': 'Printer name is required'}, status=400)
+    if not is_valid_ip_address(allowed_ip):
+        return JsonResponse({'status': 'error', 'message': 'Enter a valid printer IP address'}, status=400)
+
+    printer_id = data.get('id')
+    if printer_id:
+        printer = get_object_or_404(PrinterFilter, pk=printer_id)
+        duplicate = PrinterFilter.objects.filter(allowed_ip=allowed_ip).exclude(pk=printer.pk).first()
+        if duplicate:
+            return JsonResponse({'status': 'error', 'message': 'That printer IP is already configured'}, status=400)
+        printer.allowed_ip = allowed_ip
+        printer.display_name = display_name
+        printer.is_enabled = is_enabled
+        printer.save(update_fields=['allowed_ip', 'display_name', 'is_enabled', 'updated_at'])
+    else:
+        printer, _ = PrinterFilter.objects.update_or_create(
+            allowed_ip=allowed_ip,
+            defaults={'display_name': display_name, 'is_enabled': is_enabled},
+        )
+
+    return JsonResponse({
+        'status': 'success',
+        'printer': serialize_printer_filter(printer),
+    })
+
+
+@require_POST
+def delete_allowed_printer(request, printer_id):
+    printer = get_object_or_404(PrinterFilter, pk=printer_id)
+    deleted_name = printer.display_name or printer.allowed_ip
+    printer.delete()
+    return JsonResponse({
+        'status': 'success',
+        'message': f'{deleted_name} removed',
+    })
+
+
 def normalize_printer_name(value):
     if not isinstance(value, str):
         return ''
     return value.strip()[:255]
+
+
+def normalize_printer_ip(value):
+    if not isinstance(value, str):
+        return ''
+    return value.strip()[:45]
+
+
+def is_valid_ip_address(value):
+    try:
+        ip_address(value)
+    except ValueError:
+        return False
+    return True
+
+
+def normalize_bool(value, default=False):
+    if value is None:
+        return default
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, str):
+        return value.lower() in {'1', 'true', 'yes', 'on'}
+    return bool(value)
+
+
+def serialize_printer_filter(setting):
+    allowed_ip = setting.allowed_ip if setting else ''
+    display_name = setting.display_name if setting else ''
+    enabled = bool(setting and setting.enabled)
+    return {
+        'id': setting.id if setting else None,
+        'enabled': enabled,
+        'is_enabled': bool(setting and setting.is_enabled),
+        'allowed_ip': allowed_ip,
+        'display_name': display_name,
+    }
 
 
 def normalize_sent_count(value, label_count):

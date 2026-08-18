@@ -45,6 +45,24 @@ class LPNSuffix(models.Model):
         return self.suffix
 
 
+class PrinterFilter(models.Model):
+    allowed_ip = models.CharField(max_length=45, blank=True)
+    display_name = models.CharField(max_length=255, blank=True)
+    is_enabled = models.BooleanField(default=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    @property
+    def enabled(self):
+        return bool(self.is_enabled and self.allowed_ip and self.display_name)
+
+    def __str__(self):
+        if self.enabled:
+            return f'{self.display_name} ({self.allowed_ip})'
+        if self.display_name or self.allowed_ip:
+            return f'{self.display_name or self.allowed_ip} (disabled)'
+        return 'Printer entry disabled'
+
+
 """This class is used to define the LPN model."""
 class LPN(models.Model):
     full_lpn = models.CharField(max_length=15, unique=True, db_index=True)

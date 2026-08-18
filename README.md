@@ -183,7 +183,7 @@ PostgreSQL is the default database engine. Set these variables before running mi
 ```powershell
 $env:DJANGO_SECRET_KEY='replace-with-a-production-secret'
 $env:DJANGO_DEBUG='false'
-$env:DJANGO_ALLOWED_HOSTS='www.GRL-ZebraPrint.com,GRL-ZebraPrint.com'
+$env:DJANGO_ALLOWED_HOSTS='www.grlprint.com,grlprint.com'
 $env:POSTGRES_DB='zebra_web_print'
 $env:POSTGRES_USER='zebra_web_print'
 $env:POSTGRES_PASSWORD='your_password'

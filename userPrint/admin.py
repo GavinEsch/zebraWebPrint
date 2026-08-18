@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import LPN, LPNSuffix, PrintJob
+from .models import LPN, LPNSuffix, PrinterFilter, PrintJob
 
 """This file is used to register the LPN model with the Django admin site."""
 
@@ -95,3 +95,10 @@ class LPNSuffixAdmin(admin.ModelAdmin):
     list_display = ('suffix', 'created_at')
     search_fields = ('suffix',)
     readonly_fields = ('suffix', 'created_at')
+
+
+@admin.register(PrinterFilter)
+class PrinterFilterAdmin(admin.ModelAdmin):
+    list_display = ('display_name', 'allowed_ip', 'is_enabled', 'updated_at')
+    list_filter = ('is_enabled',)
+    search_fields = ('display_name', 'allowed_ip')

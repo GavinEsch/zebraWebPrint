@@ -81,6 +81,111 @@ button.stop-printer-button:focus {
     margin-bottom: 0;
 }
 
+.printer-filter-summary {
+    color: var(--pico-muted-color);
+    font-size: 0.9rem;
+    margin: 0.75rem 0 0;
+}
+
+.printer-management-panel {
+    margin-bottom: 1rem;
+}
+
+.printer-management-header {
+    align-items: start;
+    display: flex;
+    justify-content: space-between;
+}
+
+.printer-management-header h4,
+.printer-management-header p {
+    margin-bottom: 0.35rem;
+}
+
+.printer-management-form fieldset {
+    align-items: stretch;
+    margin-bottom: 0;
+}
+
+.compact-inline-option {
+    align-self: stretch;
+    margin: 0;
+    padding: 0 0.75rem;
+    white-space: nowrap;
+}
+
+.printer-management-grid {
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.printer-management-grid h4 {
+    margin-bottom: 0.5rem;
+}
+
+.printer-management-list {
+    display: grid;
+    gap: 0.625rem;
+}
+
+.printer-management-empty {
+    color: var(--pico-muted-color);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.printer-row {
+    border: 1px solid var(--pico-muted-border-color);
+    border-radius: 0.375rem;
+    display: grid;
+    gap: 0.5rem;
+    padding: 0.75rem;
+}
+
+.printer-row-title {
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0;
+}
+
+.printer-row-meta {
+    color: var(--pico-muted-color);
+    font-size: 0.875rem;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.printer-row-actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.printer-row-actions button {
+    margin: 0;
+    width: auto;
+}
+
+.printer-row-actions input[type="text"] {
+    margin: 0;
+    min-width: 10rem;
+}
+
+button.remove-printer-button {
+    --pico-background-color: var(--pico-del-color);
+    --pico-border-color: var(--pico-del-color);
+    margin: 0;
+    width: auto;
+}
+
+button.remove-printer-button:hover,
+button.remove-printer-button:focus {
+    --pico-background-color: #ef4444;
+    --pico-border-color: #ef4444;
+}
+
 .import-preview {
     border: 1px solid var(--pico-muted-border-color);
     border-radius: 0.5rem;

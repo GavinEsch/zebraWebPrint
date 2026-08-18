@@ -3,7 +3,7 @@ import json
 from django.test import TestCase
 from django.urls import reverse
 
-from .models import LPN, LPNSuffix, PrintJob
+from .models import LPN, LPNSuffix, PrinterFilter, PrintJob
 
 
 class ReserveLPNTests(TestCase):
@@ -138,3 +138,101 @@ class ReserveLPNTests(TestCase):
         self.assertEqual(print_job.sent_count, 5)
         self.assertEqual(print_job.error_message, 'Canceled by user from browser')
         self.assertIsNotNone(print_job.canceled_at)
+
+    def test_allowed_printers_defaults_to_empty_list(self):
+        response = self.client.get(reverse('allowed_printers'))
+
+        self.assertEqual(response.status_code, 200)
+        data = response.json()
+        self.assertEqual(data['status'], 'success')
+        self.assertEqual(data['printers'], [])
+        self.assertEqual(data['enabled_count'], 0)
+
+    def test_allowed_printer_can_be_saved(self):
+        response = self.client.post(
+            reverse('save_allowed_printer'),
+            data=json.dumps({
+                'allowed_ip': '192.168.1.50',
+                'display_name': 'Receiving Zebra',
+                'is_enabled': True,
+            }),
+            content_type='application/json',
+        )
+
+        self.assertEqual(response.status_code, 200)
+        printer = response.json()['printer']
+        self.assertTrue(printer['enabled'])
+        self.assertEqual(printer['allowed_ip'], '192.168.1.50')
+        self.assertEqual(printer['display_name'], 'Receiving Zebra')
+        setting = PrinterFilter.objects.get()
+        self.assertEqual(setting.allowed_ip, '192.168.1.50')
+        self.assertEqual(setting.display_name, 'Receiving Zebra')
+        self.assertTrue(setting.is_enabled)
+
+    def test_allowed_printer_rejects_invalid_ip(self):
+        response = self.client.post(
+            reverse('save_allowed_printer'),
+            data=json.dumps({
+                'allowed_ip': 'not an ip',
+                'display_name': 'Receiving Zebra',
+            }),
+            content_type='application/json',
+        )
+
+        self.assertEqual(response.status_code, 400)
+        self.assertEqual(response.json()['status'], 'error')
+        self.assertEqual(PrinterFilter.objects.count(), 0)
+
+    def test_allowed_printer_can_be_disabled(self):
+        setting = PrinterFilter.objects.create(
+            allowed_ip='192.168.1.50',
+            display_name='Receiving Zebra',
+        )
+
+        response = self.client.post(
+            reverse('save_allowed_printer'),
+            data=json.dumps({
+                'id': setting.id,
+                'allowed_ip': '192.168.1.50',
+                'display_name': 'Receiving Zebra',
+                'is_enabled': False,
+            }),
+            content_type='application/json',
+        )
+
+        self.assertEqual(response.status_code, 200)
+        printer = response.json()['printer']
+        self.assertFalse(printer['enabled'])
+        setting.refresh_from_db()
+        self.assertFalse(setting.is_enabled)
+
+    def test_allowed_printers_returns_multiple_entries(self):
+        PrinterFilter.objects.create(
+            allowed_ip='192.168.1.50',
+            display_name='Receiving Zebra',
+            is_enabled=True,
+        )
+        PrinterFilter.objects.create(
+            allowed_ip='192.168.1.51',
+            display_name='Shipping Zebra',
+            is_enabled=False,
+        )
+
+        response = self.client.get(reverse('allowed_printers'))
+
+        self.assertEqual(response.status_code, 200)
+        data = response.json()
+        self.assertEqual(len(data['printers']), 2)
+        self.assertEqual(data['enabled_count'], 1)
+
+    def test_allowed_printer_can_be_deleted(self):
+        setting = PrinterFilter.objects.create(
+            allowed_ip='192.168.1.50',
+            display_name='Receiving Zebra',
+        )
+
+        response = self.client.post(reverse('delete_allowed_printer', args=[setting.id]))
+
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.json()['status'], 'success')
+        self.assertEqual(PrinterFilter.objects.count(), 0)

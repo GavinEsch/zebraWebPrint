@@ -3,7 +3,11 @@
 
 //Select the printer
 var selected_device;
+var selected_import_device;
+var active_print_device;
+var allowed_printers = [];
         var devices = [];
+        var discovered_devices = [];
         var isPrinting = false;
         var activePrintJobId = null;
         var activeSentCount = 0;
@@ -44,8 +48,71 @@ var selected_device;
             }
         }
 
-        function selectedPrinterName() {
-            return selected_device ? (selected_device.name || selected_device.uid || "Selected printer") : "No printer selected";
+        function deviceSearchText(device) {
+            var searchableValues = [];
+            ['uid', 'name', 'connection', 'deviceType', 'manufacturer', 'provider'].forEach(function(key) {
+                if(device[key]) {
+                    searchableValues.push(String(device[key]));
+                }
+            });
+
+            try {
+                searchableValues.push(JSON.stringify(device));
+            } catch(error) {}
+
+            return searchableValues.join(' ');
+        }
+
+        function deviceMatchesPrinterIp(device, ipAddress) {
+            return !!(device && ipAddress && deviceSearchText(device).indexOf(ipAddress) !== -1);
+        }
+
+        function extractDeviceIp(device) {
+            if(!device) {
+                return '';
+            }
+
+            var match = deviceSearchText(device).match(/\b(?:\d{1,3}\.){3}\d{1,3}\b/);
+            return match ? match[0] : '';
+        }
+
+        function enabledAllowedPrinters() {
+            return allowed_printers.filter(function(printer) {
+                return printer.enabled;
+            });
+        }
+
+        function configuredPrinterForDevice(device) {
+            return enabledAllowedPrinters().find(function(printer) {
+                return deviceMatchesPrinterIp(device, printer.allowed_ip);
+            }) || null;
+        }
+
+        function deviceAllowedForPrinting(device) {
+            return !!configuredPrinterForDevice(device);
+        }
+
+        function deviceDisplayName(device) {
+            if(!device) {
+                return "No printer selected";
+            }
+            var configuredPrinter = configuredPrinterForDevice(device);
+            if(configuredPrinter) {
+                return configuredPrinter.display_name;
+            }
+            return device.name || device.uid || "Selected printer";
+        }
+
+        function selectedPrinterName(device) {
+            return deviceDisplayName(device || selected_device);
+        }
+
+        function selectedImportPrinterName() {
+            return deviceDisplayName(selected_import_device);
+        }
+
+        function printerNameForJob(device) {
+            return device ? deviceDisplayName(device) : '';
         }
 
         function labelCountFromZpl(dataToWrite) {
@@ -65,11 +132,90 @@ var selected_device;
             };
         }
 
-        function setNoPrinterStatus() {
+        function setNoPrinterStatus(details) {
             setPrintStatus("No printer selected", [
-                "Choose a Zebra printer from the list.",
+                details || "Choose a Zebra printer from the list.",
                 "If the list is empty, check Zebra Browser Print and the printer connection."
             ]);
+        }
+
+        function deviceOptionValue(device) {
+            return device ? (device.uid || device.name || '') : '';
+        }
+
+        function rememberDiscoveredDevice(device) {
+            if(!device) {
+                return;
+            }
+
+            var optionValue = deviceOptionValue(device);
+            var existingDevice = discovered_devices.find(function(discoveredDevice) {
+                return deviceOptionValue(discoveredDevice) === optionValue;
+            });
+            if(!existingDevice) {
+                discovered_devices.push(device);
+            }
+        }
+
+        function clearDeviceOptions(selectId) {
+            var html_select = document.getElementById(selectId);
+            if(!html_select) {
+                return;
+            }
+
+            while(html_select.options.length) {
+                html_select.remove(0);
+            }
+        }
+
+        function selectDeviceInDropdown(selectId, device) {
+            var html_select = document.getElementById(selectId);
+            if(html_select && device) {
+                html_select.value = deviceOptionValue(device);
+            }
+        }
+
+        function findDeviceByOptionValue(optionValue) {
+            return devices.find(function(device) {
+                return deviceOptionValue(device) === optionValue;
+            }) || null;
+        }
+
+        function refreshPrinterSelects() {
+            var previousSelectedValue = selected_device ? deviceOptionValue(selected_device) : '';
+            var previousImportValue = selected_import_device ? deviceOptionValue(selected_import_device) : '';
+
+            devices = discovered_devices.filter(deviceAllowedForPrinting);
+            clearDeviceOptions("selected_device");
+            clearDeviceOptions("import_selected_device");
+            devices.forEach(addDeviceOption);
+
+            selected_device = findDeviceByOptionValue(previousSelectedValue) || devices[0] || null;
+            selected_import_device = findDeviceByOptionValue(previousImportValue) || selected_device || null;
+
+            selectDeviceInDropdown("selected_device", selected_device);
+            selectDeviceInDropdown("import_selected_device", selected_import_device);
+            renderPrinterManagement();
+        }
+
+        function addDeviceOptionToSelect(selectId, device) {
+            var html_select = document.getElementById(selectId);
+            if(!html_select) {
+                return;
+            }
+
+            var optionValue = deviceOptionValue(device);
+            var existingOption = Array.prototype.find.call(html_select.options, function(option) {
+                return option.value === optionValue;
+            });
+            if(existingOption) {
+                return;
+            }
+
+            var option = document.createElement("option");
+            option.text = deviceDisplayName(device);
+            option.value = optionValue;
+            html_select.add(option);
         }
 
         function addDeviceOption(device) {
@@ -77,49 +223,34 @@ var selected_device;
                 return;
             }
 
-            var html_select = document.getElementById("selected_device");
-            if(!html_select) {
-                return;
-            }
-
-            var option = document.createElement("option");
-            option.text = device.name || device.uid || "Unnamed printer";
-            option.value = device.uid || "";
-            html_select.add(option);
+            addDeviceOptionToSelect("selected_device", device);
+            addDeviceOptionToSelect("import_selected_device", device);
         }
 
         function loadLocalPrinters() {
             setPrintStatus("Searching for Zebra printers...", "Checking printers available through Zebra Browser Print.");
 
             BrowserPrint.getLocalDevices(function(device_list){
-                var foundPrinters = false;
-
                 for(var i = 0; i < device_list.length; i++)
                 {
-                    var device = device_list[i];
-
-                    if(!selected_device || device.uid != selected_device.uid)
-                    {
-                        devices.push(device);
-                        addDeviceOption(device);
-                    }
-
-                    if(!selected_device) {
-                        selected_device = device;
-                    }
-
-                    foundPrinters = true;
+                    rememberDiscoveredDevice(device_list[i]);
                 }
+                refreshPrinterSelects();
 
-                if(foundPrinters) {
+                if(devices.length) {
                     setPrintStatus("Ready to print", [
                         "Printer: " + selectedPrinterName(),
-                        "Found " + device_list.length + " printer(s)."
+                        "Found " + devices.length + " enabled configured printer(s)."
+                    ]);
+                } else if(enabledAllowedPrinters().length) {
+                    setPrintStatus("Configured printers not found", [
+                        "Browser Print found " + device_list.length + " printer(s), but none matched an enabled configured IP.",
+                        "Use Printer Management on the admin page to add or edit allowed printers."
                     ]);
                 } else {
-                    setPrintStatus("No Zebra printers found", [
-                        "Check that Zebra Browser Print is running.",
-                        "Confirm the printer is installed and connected."
+                    setPrintStatus("No enabled printers configured", [
+                        "Use Printer Management on the admin page to enable printers before printing.",
+                        "Browser Print found " + device_list.length + " local printer(s)."
                     ]);
                 }
             }, function(error){
@@ -132,15 +263,16 @@ var selected_device;
         function setup()
         {
             setupImportFileSummary();
+            setupPrinterManagement();
             setPrintStatus("Connecting to Zebra Browser Print...", "Looking for the default Zebra printer.");
 
-            BrowserPrint.getDefaultDevice("printer", function(device)
+            loadAllowedPrinters().finally(function() {
+                BrowserPrint.getDefaultDevice("printer", function(device)
                     {
 
-                        selected_device = device;
                         if(device) {
-                            devices.push(device);
-                            addDeviceOption(device);
+                            rememberDiscoveredDevice(device);
+                            refreshPrinterSelects();
                         }
                         
                         //get the list of devices
@@ -153,12 +285,403 @@ var selected_device;
                             message
                         ]);
                         loadLocalPrinters();
-                    })
+                    });
+            });
         }
 
         function getCsrfToken() {
             var tokenInput = document.querySelector('[name=csrfmiddlewaretoken]');
             return tokenInput ? tokenInput.value : '';
+        }
+
+        function applyAllowedPrinters(data) {
+            allowed_printers = Array.isArray(data && data.printers) ? data.printers : [];
+            renderPrinterManagement();
+            refreshPrinterSelects();
+        }
+
+        function loadAllowedPrinters() {
+            return fetch('/api/printers/')
+                .then(response => response.json().then(data => {
+                    if(!response.ok) {
+                        throw new Error(data.message || 'Unable to load allowed printers');
+                    }
+                    applyAllowedPrinters(data);
+                    return data;
+                }))
+                .catch(error => {
+                    console.error('Unable to load allowed printers:', error);
+                    applyAllowedPrinters({ printers: [] });
+                    return { printers: [] };
+                });
+        }
+
+        function updatePrinterManagementSummary(message) {
+            var summary = document.getElementById("printer_management_summary");
+            if(summary) {
+                summary.textContent = message;
+            }
+        }
+
+        function setupPrinterManagement() {
+            clearAllowedPrinterForm();
+            renderPrinterManagement();
+        }
+
+        function clearAllowedPrinterForm() {
+            var idInput = document.getElementById("managed_printer_id");
+            var ipInput = document.getElementById("managed_printer_ip");
+            var nameInput = document.getElementById("managed_printer_name");
+            var enabledInput = document.getElementById("managed_printer_enabled");
+            var saveButton = document.getElementById("managed_printer_save_button");
+            if(idInput) {
+                idInput.value = '';
+            }
+            if(ipInput) {
+                ipInput.value = '';
+            }
+            if(nameInput) {
+                nameInput.value = '';
+            }
+            if(enabledInput) {
+                enabledInput.checked = true;
+            }
+            if(saveButton) {
+                saveButton.value = 'Save';
+            }
+        }
+
+        function editAllowedPrinter(printerId) {
+            var printer = allowed_printers.find(function(currentPrinter) {
+                return String(currentPrinter.id) === String(printerId);
+            });
+            if(!printer) {
+                return;
+            }
+
+            var idInput = document.getElementById("managed_printer_id");
+            var ipInput = document.getElementById("managed_printer_ip");
+            var nameInput = document.getElementById("managed_printer_name");
+            var enabledInput = document.getElementById("managed_printer_enabled");
+            var saveButton = document.getElementById("managed_printer_save_button");
+            if(idInput) {
+                idInput.value = printer.id;
+            }
+            if(ipInput) {
+                ipInput.value = printer.allowed_ip;
+            }
+            if(nameInput) {
+                nameInput.value = printer.display_name;
+            }
+            if(enabledInput) {
+                enabledInput.checked = !!printer.is_enabled;
+            }
+            if(saveButton) {
+                saveButton.value = 'Update';
+            }
+            updatePrinterManagementSummary("Editing " + printer.display_name + ".");
+        }
+
+        function saveAllowedPrinterFromForm() {
+            var idInput = document.getElementById("managed_printer_id");
+            var ipInput = document.getElementById("managed_printer_ip");
+            var nameInput = document.getElementById("managed_printer_name");
+            var enabledInput = document.getElementById("managed_printer_enabled");
+            var printerId = idInput ? idInput.value.trim() : '';
+            var allowedIp = ipInput ? ipInput.value.trim() : '';
+            var displayName = nameInput ? nameInput.value.trim() : '';
+            var isEnabled = enabledInput ? enabledInput.checked : true;
+
+            if(!allowedIp || !displayName) {
+                setPrintStatus("Printer setup incomplete", "Enter both a printer IP and display name.");
+                alert("Enter both a printer IP and display name.");
+                return;
+            }
+
+            return saveAllowedPrinter({
+                id: printerId,
+                allowed_ip: allowedIp,
+                display_name: displayName,
+                is_enabled: isEnabled
+            }, true);
+        }
+
+        function saveDiscoveredPrinter(discoveredIndex) {
+            var device = discovered_devices[discoveredIndex];
+            if(!device) {
+                return;
+            }
+
+            var ipInput = document.getElementById("discovered_printer_ip_" + discoveredIndex);
+            var nameInput = document.getElementById("discovered_printer_name_" + discoveredIndex);
+            var enabledInput = document.getElementById("discovered_printer_enabled_" + discoveredIndex);
+            var allowedIp = ipInput ? ipInput.value.trim() : extractDeviceIp(device);
+            var displayName = nameInput ? nameInput.value.trim() : deviceDisplayName(device);
+            var isEnabled = enabledInput ? enabledInput.checked : true;
+
+            if(!allowedIp || !displayName) {
+                setPrintStatus("Discovered printer needs details", "Enter the printer IP and display name before saving.");
+                alert("Enter the printer IP and display name before saving.");
+                return;
+            }
+
+            return saveAllowedPrinter({
+                allowed_ip: allowedIp,
+                display_name: displayName,
+                is_enabled: isEnabled
+            }, false);
+        }
+
+        function setAllowedPrinterEnabled(printerId, isEnabled) {
+            var printer = allowed_printers.find(function(currentPrinter) {
+                return String(currentPrinter.id) === String(printerId);
+            });
+            if(!printer) {
+                return;
+            }
+
+            return saveAllowedPrinter({
+                id: printer.id,
+                allowed_ip: printer.allowed_ip,
+                display_name: printer.display_name,
+                is_enabled: isEnabled
+            }, false);
+        }
+
+        function deleteAllowedPrinter(printerId) {
+            var printer = allowed_printers.find(function(currentPrinter) {
+                return String(currentPrinter.id) === String(printerId);
+            });
+            if(!printer) {
+                return;
+            }
+
+            var confirmed = confirm("Remove " + printer.display_name + " from the allowed printer list?");
+            if(!confirmed) {
+                return;
+            }
+
+            updatePrinterManagementSummary("Removing printer...");
+            return fetch('/api/printers/' + printer.id + '/delete/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCsrfToken(),
+                },
+                body: JSON.stringify({})
+            })
+            .then(response => response.json().then(data => {
+                if(!response.ok) {
+                    throw new Error(data.message || 'Unable to remove printer');
+                }
+                return loadAllowedPrinters().then(function() {
+                    clearAllowedPrinterForm();
+                    setPrintStatus("Printer removed", data.message || "Printer removed.");
+                    updatePrinterManagementSummary("Allowed printers updated.");
+                    return data;
+                });
+            }))
+            .catch(error => {
+                setPrintStatus("Unable to remove printer", error.message || "Unknown error.");
+                alert(error.message || 'Unable to remove printer');
+            });
+        }
+
+        function saveAllowedPrinter(payload, clearFormAfterSave) {
+            updatePrinterManagementSummary("Saving printer...");
+            return fetch('/api/printers/save/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCsrfToken(),
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json().then(data => {
+                if(!response.ok) {
+                    throw new Error(data.message || 'Unable to save printer');
+                }
+                return loadAllowedPrinters().then(function() {
+                    if(clearFormAfterSave) {
+                        clearAllowedPrinterForm();
+                    }
+                    setPrintStatus("Printer saved", data.printer.display_name + " at " + data.printer.allowed_ip + ".");
+                    updatePrinterManagementSummary("Allowed printers updated.");
+                    return data;
+                });
+            }))
+            .catch(error => {
+                renderPrinterManagement();
+                setPrintStatus("Unable to save printer", error.message || "Unknown error.");
+                alert(error.message || 'Unable to save printer');
+            });
+        }
+
+        function createPrinterRow(title, metaLines, actions) {
+            var row = document.createElement('div');
+            row.className = 'printer-row';
+
+            var rowTitle = document.createElement('p');
+            rowTitle.className = 'printer-row-title';
+            rowTitle.textContent = title;
+            row.appendChild(rowTitle);
+
+            metaLines.forEach(function(metaLine) {
+                if(metaLine) {
+                    var meta = document.createElement('p');
+                    meta.className = 'printer-row-meta';
+                    meta.textContent = metaLine;
+                    row.appendChild(meta);
+                }
+            });
+
+            if(actions) {
+                row.appendChild(actions);
+            }
+
+            return row;
+        }
+
+        function createEmptyPrinterMessage(message) {
+            var empty = document.createElement('p');
+            empty.className = 'printer-management-empty';
+            empty.textContent = message;
+            return empty;
+        }
+
+        function renderAllowedPrinterList() {
+            var list = document.getElementById("allowed_printer_list");
+            if(!list) {
+                return;
+            }
+
+            list.innerHTML = '';
+            if(!allowed_printers.length) {
+                list.appendChild(createEmptyPrinterMessage("No allowed printers yet."));
+                return;
+            }
+
+            allowed_printers.forEach(function(printer) {
+                var actions = document.createElement('div');
+                actions.className = 'printer-row-actions';
+
+                var enabledLabel = document.createElement('label');
+                enabledLabel.className = 'inline-option compact-inline-option';
+                var enabledCheckbox = document.createElement('input');
+                enabledCheckbox.type = 'checkbox';
+                enabledCheckbox.checked = !!printer.is_enabled;
+                enabledCheckbox.onchange = function() {
+                    setAllowedPrinterEnabled(printer.id, enabledCheckbox.checked);
+                };
+                enabledLabel.appendChild(enabledCheckbox);
+                enabledLabel.appendChild(document.createTextNode('Enabled'));
+                actions.appendChild(enabledLabel);
+
+                var editButton = document.createElement('button');
+                editButton.type = 'button';
+                editButton.className = 'secondary';
+                editButton.textContent = 'Edit';
+                editButton.onclick = function() {
+                    editAllowedPrinter(printer.id);
+                };
+                actions.appendChild(editButton);
+
+                var removeButton = document.createElement('button');
+                removeButton.type = 'button';
+                removeButton.className = 'remove-printer-button';
+                removeButton.textContent = 'Remove';
+                removeButton.onclick = function() {
+                    deleteAllowedPrinter(printer.id);
+                };
+                actions.appendChild(removeButton);
+
+                list.appendChild(createPrinterRow(
+                    printer.display_name,
+                    [
+                        "IP: " + printer.allowed_ip,
+                        printer.enabled ? "Visible to users" : "Hidden from users"
+                    ],
+                    actions
+                ));
+            });
+        }
+
+        function renderDiscoveredPrinterList() {
+            var list = document.getElementById("discovered_printer_list");
+            if(!list) {
+                return;
+            }
+
+            list.innerHTML = '';
+            if(!discovered_devices.length) {
+                list.appendChild(createEmptyPrinterMessage("No printers discovered on this workstation yet."));
+                return;
+            }
+
+            discovered_devices.forEach(function(device, index) {
+                var detectedIp = extractDeviceIp(device);
+                var rawName = device.name || device.uid || "Unnamed printer";
+                var configuredPrinter = allowed_printers.find(function(printer) {
+                    return detectedIp && printer.allowed_ip === detectedIp;
+                });
+
+                var actions = document.createElement('div');
+                actions.className = 'printer-row-actions';
+
+                var ipInput = document.createElement('input');
+                ipInput.id = 'discovered_printer_ip_' + index;
+                ipInput.type = 'text';
+                ipInput.placeholder = 'Printer IP';
+                ipInput.value = configuredPrinter ? configuredPrinter.allowed_ip : detectedIp;
+                ipInput.inputMode = 'numeric';
+                actions.appendChild(ipInput);
+
+                var nameInput = document.createElement('input');
+                nameInput.id = 'discovered_printer_name_' + index;
+                nameInput.type = 'text';
+                nameInput.placeholder = 'Display name';
+                nameInput.value = configuredPrinter ? configuredPrinter.display_name : rawName;
+                actions.appendChild(nameInput);
+
+                var enabledLabel = document.createElement('label');
+                enabledLabel.className = 'inline-option compact-inline-option';
+                var enabledCheckbox = document.createElement('input');
+                enabledCheckbox.id = 'discovered_printer_enabled_' + index;
+                enabledCheckbox.type = 'checkbox';
+                enabledCheckbox.checked = configuredPrinter ? !!configuredPrinter.is_enabled : true;
+                enabledLabel.appendChild(enabledCheckbox);
+                enabledLabel.appendChild(document.createTextNode('Enabled'));
+                actions.appendChild(enabledLabel);
+
+                var saveButton = document.createElement('button');
+                saveButton.type = 'button';
+                saveButton.textContent = configuredPrinter ? 'Update' : 'Allow';
+                saveButton.onclick = function() {
+                    saveDiscoveredPrinter(index);
+                };
+                actions.appendChild(saveButton);
+
+                list.appendChild(createPrinterRow(
+                    rawName,
+                    [
+                        detectedIp ? "Detected IP: " + detectedIp : "No IP detected automatically.",
+                        configuredPrinter ? "Configured as: " + configuredPrinter.display_name : "Not configured yet.",
+                        "Browser Print ID: " + deviceOptionValue(device)
+                    ],
+                    actions
+                ));
+            });
+        }
+
+        function renderPrinterManagement() {
+            renderAllowedPrinterList();
+            renderDiscoveredPrinterList();
+            var enabledCount = enabledAllowedPrinters().length;
+            if(allowed_printers.length) {
+                updatePrinterManagementSummary(enabledCount + " of " + allowed_printers.length + " configured printer(s) enabled for users.");
+            } else {
+                updatePrinterManagementSummary("No printers are enabled for users yet.");
+            }
         }
 
         function setPrintControlsDisabled(isDisabled) {
@@ -169,17 +692,27 @@ var selected_device;
                     button.disabled = isDisabled;
                 }
             });
+
+            ['selected_device', 'import_selected_device'].forEach(function(selectId) {
+                var select = document.getElementById(selectId);
+                if(select) {
+                    select.disabled = isDisabled;
+                }
+            });
         }
 
         function setStopButtonDisabled(isDisabled) {
-            var button = document.getElementById("stop_printer_button");
-            if(button) {
-                button.disabled = isDisabled;
-            }
+            ['stop_printer_button', 'import_stop_printer_button'].forEach(function(buttonId) {
+                var button = document.getElementById(buttonId);
+                if(button) {
+                    button.disabled = isDisabled;
+                }
+            });
         }
 
         function stopSelectedPrinter() {
-            if(!selected_device) {
+            var deviceToStop = active_print_device || selected_device;
+            if(!deviceToStop) {
                 setNoPrinterStatus();
                 alert("No printer selected");
                 return;
@@ -193,21 +726,22 @@ var selected_device;
             cancelPrintRequested = true;
             setStopButtonDisabled(true);
             setPrintStatus("Stopping printer...", [
-                "Printer: " + selectedPrinterName(),
+                "Printer: " + selectedPrinterName(deviceToStop),
                 "The app will stop sending more labels.",
                 "The printer should stop after the current label or buffered labels finish."
             ]);
 
             return new Promise((resolve, reject) => {
-                selected_device.send("~JA", function(){
+                deviceToStop.send("~JA", function(){
                     updatePrintJobStatus(activePrintJobId, 'canceled', 'Canceled by user from browser', activeSentCount).finally(function(){
                         activePrintJobId = null;
                         activeSentCount = 0;
+                        active_print_device = null;
                         isPrinting = false;
                         setPrintControlsDisabled(false);
                         setStopButtonDisabled(false);
                         setPrintStatus("Stop command sent", [
-                            "Printer: " + selectedPrinterName(),
+                            "Printer: " + selectedPrinterName(deviceToStop),
                             "Queued labels were canceled if they were still in the printer buffer."
                         ]);
                         resolve();
@@ -216,7 +750,7 @@ var selected_device;
                     var message = errorMessage || "Unable to send stop command";
                     setStopButtonDisabled(false);
                     setPrintStatus("Unable to stop printer", [
-                        "Printer: " + selectedPrinterName(),
+                        "Printer: " + selectedPrinterName(deviceToStop),
                         message
                     ]);
                     alert(message);
@@ -241,7 +775,7 @@ var selected_device;
                 },
                 body: JSON.stringify({
                     count: count,
-                    printer_name: selected_device ? selected_device.name : '',
+                    printer_name: printerNameForJob(selected_device),
                     client_context: getClientContext()
                 })
             })
@@ -261,6 +795,7 @@ var selected_device;
             if(!jobId) {
                 return Promise.resolve();
             }
+            var jobPrinter = active_print_device || selected_device;
 
             return fetch('/api/print_jobs/' + jobId + '/status/', {
                 method: 'POST',
@@ -271,7 +806,7 @@ var selected_device;
                 body: JSON.stringify({
                     status: status,
                     message: message || '',
-                    printer_name: selected_device ? selected_device.name : '',
+                    printer_name: printerNameForJob(jobPrinter),
                     sent_count: sentCount || 0,
                     client_context: getClientContext()
                 })
@@ -318,10 +853,83 @@ var selected_device;
             alert(IMPORT_FORMAT_ERROR);
         }
 
+        function clampNumber(value, min, max) {
+            return Math.min(max, Math.max(min, value));
+        }
+
+        function estimateCode128Width(value, moduleWidth) {
+            return Math.ceil(((value.length * 11) + 35) * moduleWidth);
+        }
+
+        function importBarcodeModuleWidth(labelValue, maxWidth) {
+            for(var moduleWidth = 8; moduleWidth >= 1; moduleWidth--) {
+                if(estimateCode128Width(labelValue, moduleWidth) <= maxWidth) {
+                    return moduleWidth;
+                }
+            }
+            return 1;
+        }
+
+        function importTextSizing(labelValue, maxWidth) {
+            var length = Math.max(labelValue.length, 1);
+            var height = 46;
+            if(length > 14) {
+                height = 40;
+            }
+            if(length > 22) {
+                height = 34;
+            }
+            if(length > 34) {
+                height = 28;
+            }
+            if(length > 48) {
+                height = 24;
+            }
+
+            var width = clampNumber(Math.floor(maxWidth / (length * 0.58)), 14, height);
+            return {
+                height: height,
+                width: width
+            };
+        }
+
+        function centeredImportLabelTemplate(labelValue, encodedLabelValue) {
+            var labelWidth = 406;
+            var labelLength = 203;
+            var horizontalMargin = 6;
+            var usableWidth = labelWidth - (horizontalMargin * 2);
+            var barcodeUsableWidth = labelWidth - 4;
+            var barcodeModuleWidth = importBarcodeModuleWidth(labelValue, barcodeUsableWidth);
+            var barcodeHeight = labelValue.length > 30 ? 112 : 132;
+            var barcodeWidth = estimateCode128Width(labelValue, barcodeModuleWidth);
+            var barcodeX = Math.round((labelWidth - Math.min(barcodeWidth, barcodeUsableWidth)) / 2);
+            var barcodeY = 12;
+            var textBoxWidth = usableWidth;
+            var textSizing = importTextSizing(labelValue, textBoxWidth);
+            var textY = clampNumber(barcodeY + barcodeHeight + 8, 148, labelLength - textSizing.height - 2);
+
+            return '^XA^PW' + labelWidth
+                + '^LL' + labelLength
+                + '^LH0,0'
+                + '^FO' + barcodeX + ',' + barcodeY
+                + '^BY' + barcodeModuleWidth
+                + '^BCN,' + barcodeHeight + ',N,N,N'
+                + '^FH^FD' + encodedLabelValue + '^FS'
+                + '^A0N,' + textSizing.height + ',' + textSizing.width
+                + '^FO' + horizontalMargin + ',' + textY
+                + '^FB' + textBoxWidth + ',1,0,C,0'
+                + '^FH^FD' + encodedLabelValue + '^FS'
+                + '^XZ';
+        }
+
         function  LPNTemplate(FullLPN, options){
             options = options || {};
             var labelValue = normalizeLabelValue(FullLPN);
             var encodedLabelValue = zplHexField(labelValue);
+
+            if(options.layout === 'importCentered') {
+                return centeredImportLabelTemplate(labelValue, encodedLabelValue);
+            }
 
             if(isGeneratedLPN(labelValue) && !options.boldLastSix) {
                 var FirstFive = labelValue.substr(3, 5);
@@ -388,7 +996,7 @@ var selected_device;
             } else {
 
                 //gets the ZPL code for the label value and sends it to the printer
-                var dataToWrite = LPNTemplate(fullLPN);
+                var dataToWrite = LPNTemplate(fullLPN, { layout: 'importCentered' });
                 setPrintStatus("Preparing custom label...", [
                     "Value: " + fullLPN,
                     "Printer: " + selectedPrinterName()
@@ -414,7 +1022,7 @@ var selected_device;
         @param {Zebra.Printer} zebraPrinter - The printer object
         @returns {Promise} - The promise that resolves to true if the printer is ready to print
         */
-        function getStatus(zebraPrinter) {
+        function getStatus(zebraPrinter, device) {
             return new Promise((resolve, reject) => {
                 zebraPrinter.getStatus(function(status){
                     var statusMessage = status.getMessage();
@@ -424,7 +1032,7 @@ var selected_device;
                     switch(statusMessage) {
                         case "Head Open":
                             setPrintStatus("Printer needs attention", [
-                                "Printer: " + selectedPrinterName(),
+                                "Printer: " + selectedPrinterName(device),
                                 "Close the printer head, then try again."
                             ]);
                             alert("Please Close Printer Head");
@@ -432,7 +1040,7 @@ var selected_device;
                             break;
                         case "Paper Out":
                             setPrintStatus("Printer needs media", [
-                                "Printer: " + selectedPrinterName(),
+                                "Printer: " + selectedPrinterName(device),
                                 "Load labels or check the media path, then try again."
                             ]);
                             alert("Please Check Paper");
@@ -440,7 +1048,7 @@ var selected_device;
                             break;
                         case "Paused":
                             setPrintStatus("Printer is paused", [
-                                "Printer: " + selectedPrinterName(),
+                                "Printer: " + selectedPrinterName(device),
                                 "Resume the printer, then try again."
                             ]);
                             alert("Printer Paused. Please Resume");
@@ -448,7 +1056,7 @@ var selected_device;
                             break;
                         default:
                             setPrintStatus("Printer ready", [
-                                "Printer: " + selectedPrinterName(),
+                                "Printer: " + selectedPrinterName(device),
                                 "Status: " + statusMessage
                             ]);
                             resolve(true);
@@ -555,8 +1163,8 @@ var selected_device;
                 dataToWrite = dataToWrite + LPNTemplate(FullLPN, options);
             });
 
-            let firstIndex = dataToWrite.indexOf("^XA^CF0,40^");
-            let lastIndex = dataToWrite.lastIndexOf("^XA^CF0,40^");
+            let firstIndex = dataToWrite.indexOf("^XA");
+            let lastIndex = dataToWrite.lastIndexOf("^XA");
 
             if (firstIndex === -1) {
                 return dataToWrite;
@@ -570,7 +1178,7 @@ var selected_device;
                 dataToWrite = dataToWrite.substring(0, insertAfterFirst) + "^MMT" + dataToWrite.substring(insertAfterFirst);
 
                 if(isFinalBatch) {
-                    lastIndex = dataToWrite.lastIndexOf("^XA^CF0,40^");
+                    lastIndex = dataToWrite.lastIndexOf("^XA");
 
                     let insertAfterLast = lastIndex + 3; 
                     dataToWrite = dataToWrite.substring(0, insertAfterLast) + "^MMC" + dataToWrite.substring(insertAfterLast);
@@ -580,9 +1188,9 @@ var selected_device;
             return dataToWrite;
         }
 
-        function sendRawToSelectedPrinter(dataToWrite) {
+        function sendRawToPrinter(device, dataToWrite) {
             return new Promise((resolve, reject) => {
-                selected_device.send(dataToWrite, function(){
+                device.send(dataToWrite, function(){
                     resolve();
                 }, function(errorMessage){
                     reject(new Error(errorMessage || 'Printer send failed'));
@@ -590,54 +1198,66 @@ var selected_device;
             });
         }
 
+        function sendRawToSelectedPrinter(dataToWrite) {
+            return sendRawToPrinter(selected_device, dataToWrite);
+        }
+
         async function writeLabelsToSelectedPrinter(lpns, printJobId, options) {
             activePrintJobId = printJobId || null;
             activeSentCount = 0;
             options = options || {};
+            var printDevice = options.device || selected_device;
+            active_print_device = printDevice;
 
             var totalLabels = lpns.length;
             var sentLabels = 0;
             var jobLine = printJobId ? "Job: " + printJobId : (options.sourceName || "Imported labels");
 
-            for(var start = 0; start < totalLabels; start += PRINT_CHUNK_SIZE) {
-                if(cancelPrintRequested) {
-                    await updatePrintJobStatus(printJobId, 'canceled', 'Canceled by user from browser', sentLabels);
-                    throw new Error("Print canceled by user");
+            try {
+                for(var start = 0; start < totalLabels; start += PRINT_CHUNK_SIZE) {
+                    if(cancelPrintRequested) {
+                        await updatePrintJobStatus(printJobId, 'canceled', 'Canceled by user from browser', sentLabels);
+                        throw new Error("Print canceled by user");
+                    }
+
+                    var end = Math.min(start + PRINT_CHUNK_SIZE, totalLabels);
+                    var chunk = lpns.slice(start, end);
+                    var isFinalBatch = end >= totalLabels;
+                    var dataToWrite = buildLabelBatchZpl(chunk, isFinalBatch, options);
+
+                    setPrintStatus("Sending labels...", [
+                        "Printer: " + selectedPrinterName(printDevice),
+                        jobLine,
+                        "Sending " + (start + 1) + "-" + end + " of " + totalLabels,
+                        "Stop Printer will cancel labels that have not been sent yet."
+                    ]);
+
+                    try {
+                        await sendRawToPrinter(printDevice, dataToWrite);
+                    } catch(error) {
+                        await updatePrintJobStatus(printJobId, 'failed', error.message || 'Printer send failed', sentLabels);
+                        throw error;
+                    }
+
+                    sentLabels = end;
+                    activeSentCount = sentLabels;
+                    await delay(100);
                 }
 
-                var end = Math.min(start + PRINT_CHUNK_SIZE, totalLabels);
-                var chunk = lpns.slice(start, end);
-                var isFinalBatch = end >= totalLabels;
-                var dataToWrite = buildLabelBatchZpl(chunk, isFinalBatch, options);
-
-                setPrintStatus("Sending labels...", [
-                    "Printer: " + selectedPrinterName(),
-                    jobLine,
-                    "Sending " + (start + 1) + "-" + end + " of " + totalLabels,
-                    "Stop Printer will cancel labels that have not been sent yet."
+                await updatePrintJobStatus(printJobId, 'sent', '', sentLabels);
+                activePrintJobId = null;
+                activeSentCount = 0;
+                cancelPrintRequested = false;
+                setPrintStatus("Print job sent", [
+                    "Printer: " + selectedPrinterName(printDevice),
+                    "Labels: " + sentLabels,
+                    jobLine
                 ]);
-
-                try {
-                    await sendRawToSelectedPrinter(dataToWrite);
-                } catch(error) {
-                    await updatePrintJobStatus(printJobId, 'failed', error.message || 'Printer send failed', sentLabels);
-                    throw error;
+            } finally {
+                if(active_print_device === printDevice) {
+                    active_print_device = null;
                 }
-
-                sentLabels = end;
-                activeSentCount = sentLabels;
-                await delay(100);
             }
-
-            await updatePrintJobStatus(printJobId, 'sent', '', sentLabels);
-            activePrintJobId = null;
-            activeSentCount = 0;
-            cancelPrintRequested = false;
-            setPrintStatus("Print job sent", [
-                "Printer: " + selectedPrinterName(),
-                "Labels: " + sentLabels,
-                jobLine
-            ]);
         }
 
         function parseCsvRows(text) {
@@ -990,8 +1610,9 @@ var selected_device;
                 return;
             }
 
-            if(!selected_device) {
-                setNoPrinterStatus();
+            var importPrinter = selected_import_device || selected_device;
+            if(!importPrinter) {
+                setNoPrinterStatus("Choose a Zebra printer from the file print list.");
                 alert("No printer selected");
                 return;
             }
@@ -1017,9 +1638,9 @@ var selected_device;
                     return;
                 }
 
-                var zebraPrinter = new Zebra.Printer(selected_device);
-                setPrintStatus("Checking printer...", "Printer: " + selectedPrinterName());
-                var printerReady = await getStatus(zebraPrinter);
+                var zebraPrinter = new Zebra.Printer(importPrinter);
+                setPrintStatus("Checking printer...", "Printer: " + selectedPrinterName(importPrinter));
+                var printerReady = await getStatus(zebraPrinter, importPrinter);
                 if(!printerReady) {
                     return;
                 }
@@ -1027,10 +1648,12 @@ var selected_device;
                 setPrintStatus("Printing imported labels...", [
                     "File: " + file.name,
                     "Labels: " + importData.totalLabels,
-                    "Printer: " + selectedPrinterName()
+                    "Printer: " + selectedPrinterName(importPrinter)
                 ]);
                 await writeLabelsToSelectedPrinter(importData.labels, null, {
+                    device: importPrinter,
                     boldLastSix: shouldBoldLastSix(),
+                    layout: 'importCentered',
                     sourceName: "File: " + file.name
                 });
             } catch(error) {
@@ -1052,8 +1675,8 @@ var selected_device;
             activePrintJobId = printJobId || null;
             activeSentCount = 0;
 
-            let firstIndex = dataToWrite.indexOf("^XA^CF0,40^");
-            let lastIndex = dataToWrite.lastIndexOf("^XA^CF0,40^");
+            let firstIndex = dataToWrite.indexOf("^XA");
+            let lastIndex = dataToWrite.lastIndexOf("^XA");
 
             if (firstIndex !== -1 && firstIndex === lastIndex) {
                 let insertAfter = firstIndex + 3;
@@ -1062,7 +1685,7 @@ var selected_device;
                 let insertAfterFirst = firstIndex + 3;
                 dataToWrite = dataToWrite.substring(0, insertAfterFirst) + "^MMT" + dataToWrite.substring(insertAfterFirst);
 
-                lastIndex = dataToWrite.lastIndexOf("^XA^CF0,40^");
+                lastIndex = dataToWrite.lastIndexOf("^XA");
 
                 let insertAfterLast = lastIndex + 3; 
                 dataToWrite = dataToWrite.substring(0, insertAfterLast) + "^MMC" + dataToWrite.substring(insertAfterLast);
@@ -1109,7 +1732,7 @@ var selected_device;
         function onDeviceSelected(selected)
         {
             for(var i = 0; i < devices.length; ++i){
-                if(selected.value == devices[i].uid)
+                if(selected.value == deviceOptionValue(devices[i]))
                 {
                     selected_device = devices[i];
                     setPrintStatus("Printer selected", "Printer: " + selectedPrinterName());
@@ -1125,6 +1748,18 @@ var selected_device;
                     "Status: " + statusMessage
                 ]);
             }, function(error){});
+        }
+
+        function onImportDeviceSelected(selected)
+        {
+            for(var i = 0; i < devices.length; ++i){
+                if(selected.value == deviceOptionValue(devices[i]))
+                {
+                    selected_import_device = devices[i];
+                    setPrintStatus("File print printer selected", "Printer: " + selectedImportPrinterName());
+                    return;
+                }
+            }
         }
         window.onload = setup;
 
