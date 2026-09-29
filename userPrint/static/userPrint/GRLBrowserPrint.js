@@ -893,12 +893,19 @@ var allowed_printers = [];
             };
         }
 
+        var LABEL_WIDTH_DOTS = 457;
+        var LABEL_LENGTH_DOTS = 254;
+
+        function zplLabelStart() {
+            return '^XA^PW' + LABEL_WIDTH_DOTS + '^LL' + LABEL_LENGTH_DOTS + '^LH0,0^LS0^LT0';
+        }
+
         function centeredImportLabelTemplate(labelValue, encodedLabelValue) {
-            var labelWidth = 406;
-            var labelLength = 203;
+            var labelWidth = LABEL_WIDTH_DOTS;
+            var labelLength = LABEL_LENGTH_DOTS;
             var horizontalMargin = 6;
             var usableWidth = labelWidth - (horizontalMargin * 2);
-            var barcodeUsableWidth = labelWidth - 4;
+            var barcodeUsableWidth = labelWidth - 12;
             var barcodeModuleWidth = importBarcodeModuleWidth(labelValue, barcodeUsableWidth);
             var barcodeHeight = labelValue.length > 30 ? 112 : 132;
             var barcodeWidth = estimateCode128Width(labelValue, barcodeModuleWidth);
@@ -908,9 +915,7 @@ var allowed_printers = [];
             var textSizing = importTextSizing(labelValue, textBoxWidth);
             var textY = clampNumber(barcodeY + barcodeHeight + 8, 148, labelLength - textSizing.height - 2);
 
-            return '^XA^PW' + labelWidth
-                + '^LL' + labelLength
-                + '^LH0,0'
+            return zplLabelStart()
                 + '^FO' + barcodeX + ',' + barcodeY
                 + '^BY' + barcodeModuleWidth
                 + '^BCN,' + barcodeHeight + ',N,N,N'
@@ -934,7 +939,7 @@ var allowed_printers = [];
             if(isGeneratedLPN(labelValue) && !options.boldLastSix) {
                 var FirstFive = labelValue.substr(3, 5);
                 var LastSix = labelValue.substr(8, 6);
-                return '^XA^CF0,40^FO40,30^BY2^BCN,100,N,N,N^FH^FD' + encodedLabelValue + '^FS^CF0,28^FO45,142^FH^FD' + zplHexField('LPN ' + FirstFive) + '^FS^CF0,58^FO185,132^FH^FD' + zplHexField(LastSix) + '^FS^XZ';
+                return zplLabelStart() + '^CF0,40^FO40,30^BY2^BCN,100,N,N,N^FH^FD' + encodedLabelValue + '^FS^CF0,28^FO45,142^FH^FD' + zplHexField('LPN ' + FirstFive) + '^FS^CF0,58^FO185,132^FH^FD' + zplHexField(LastSix) + '^FS^XZ';
             }
 
             var prefix = labelValue.length > 6 ? labelValue.slice(0, -6) : '';
@@ -948,7 +953,7 @@ var allowed_printers = [];
                     + '^CF0,52^FO' + (lastSixX + 2) + ',132^FH^FD' + zplHexField(lastSix) + '^FS';
             }
 
-            return '^XA^CF0,40^FO40,30^BY2^BCN,100,N,N,N^FH^FD' + encodedLabelValue + '^FS' + humanReadableZpl + '^XZ';
+            return zplLabelStart() + '^CF0,40^FO40,30^BY2^BCN,100,N,N,N^FH^FD' + encodedLabelValue + '^FS' + humanReadableZpl + '^XZ';
         }
 
         /*
